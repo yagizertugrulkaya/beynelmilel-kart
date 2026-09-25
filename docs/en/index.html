@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yağız Ertuğrul Kaya · Beynelmilel — Software, websites and advertising</title>
+<meta name="description" content="A software studio and agency working from Bursa, Türkiye. Custom systems, professional websites and advertising. FlowDesk, Yağız Lastik, Studia and more.">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="../favicon-16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<meta name="theme-color" content="#F6F4F1">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+<style>
+@font-face{font-family:"Atkinson Hyperlegible Next";src:url(../assets/fonts/atkinsonnext-latin-ext.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible Next";src:url(../assets/fonts/atkinsonnext-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Mono";src:url(../assets/fonts/atkinsonmono-latin-ext.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible Mono";src:url(../assets/fonts/atkinsonmono-latin.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* ===== token'lar: renk, biçim, hareket (tek kaynak) ===== */
+:root{
+  --bg:#F7F7F4;--paper:#FFFFFF;--ink:#17181A;--ink-2:#4E5057;--navy:#1F3864;--navy-d:#172B4D;--tint:#E6EAF2;
+  --bronze:#8A6D2F;--bronze-l:#A48A52;--line:#E2E0DA;--chip:#EFEDE7;--well:#F1F2F4;--dot:#8C8E94;--fd:#3A34C9;
+  --r-b:20px;--r-t:6px;--r-m:14px;--r-pill:999px;
+  --sh:0 1px 0 rgba(23,24,26,.04),0 8px 18px -14px rgba(23,24,26,.22);
+  --d1:160ms;--d2:280ms;--d3:400ms;--d4:560ms;
+  --eo:cubic-bezier(.16,1,.3,1);--ei:cubic-bezier(.5,0,.9,.4);--spring:cubic-bezier(.34,1.45,.64,1);
+  --mono:"Atkinson Hyperlegible Mono",ui-monospace,Consolas,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-padding-top:76px}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.55 "Atkinson Hyperlegible Next",system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:clip}
+img{max-width:100%;height:auto}
+h1,h2,h3,h4,p,ul{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+.ic{width:20px;height:20px;flex:none}
+.mono{font-family:var(--mono)}
+:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+main:focus{outline:none}
+.skip{position:absolute;left:12px;top:12px;z-index:30;padding:12px 16px;border-radius:8px;background:var(--navy);color:#fff;text-decoration:none}
+.skip:not(:focus){clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0}
+
+/* ===== üst çubuk (sohbet başlığı) ===== */
+.bar{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar-in{max-width:1180px;margin:0 auto;min-height:60px;padding:0 8px 0 16px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:inline-flex;align-items:center;gap:9px;min-height:44px;font-weight:700;font-size:17px;color:var(--navy);text-decoration:none;border-radius:8px}
+.brand svg{width:28px;height:25px}
+.lang{display:flex;align-items:center;font-size:15px;letter-spacing:.04em;color:var(--ink-2)}
+.lang a{display:inline-grid;place-items:center;min-width:44px;min-height:44px;text-decoration:none;border-radius:8px;transition:background-color var(--d1)}
+.lang a:hover{background:var(--tint)}
+.lang a[aria-current]{font-weight:700;color:var(--navy)}
+
+/* ===== düzen ===== */
+.wrap{max-width:680px;margin:0 auto;padding:0 16px}
+
+/* ===== profil (ilk ekran) ===== */
+.profile{text-align:center;padding:22px 0 4px}
+.avatar{display:block;width:84px;height:84px;margin:0 auto 12px;border-radius:50%}
+h1{font-size:clamp(26px,7.4vw,34px);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.role{color:var(--ink-2);font-size:16px;line-height:1.4;margin-top:4px}
+.loc{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2);font-size:15px;margin-top:4px}
+.loc .ic{width:16px;height:16px;color:var(--navy)}
+.lead{position:relative;text-align:left;margin:20px 0 18px}
+.typing{position:absolute;left:0;top:0;display:none;gap:5px;padding:15px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-b) var(--r-b) var(--r-b) var(--r-t)}
+.typing i{width:7px;height:7px;border-radius:50%;background:var(--dot)}
+
+/* ===== baloncuk ===== */
+.b{position:relative;width:fit-content;max-width:min(94%,580px);background:var(--paper);border:1px solid var(--line);border-radius:var(--r-b) var(--r-b) var(--r-b) var(--r-t);padding:12px 18px 14px;box-shadow:var(--sh);transform-origin:0 100%}
+.b + .b{margin-top:6px;border-top-left-radius:var(--r-t)}
+.b h3{font-size:18px;line-height:1.3;color:var(--navy);margin-bottom:4px}
+.b p + p{margin-top:6px}
+.lead .b{max-width:100%;font-size:19px;line-height:1.42;font-weight:600}
+.dash li{position:relative;padding-left:16px}
+.dash li::before{content:"";position:absolute;left:2px;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--navy)}
+
+/* ===== eylemler ===== */
+.cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:0 24px;border-radius:var(--r-pill);background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:18px;box-shadow:0 10px 22px -14px rgba(31,56,100,.75);transition:transform var(--d1) var(--spring),background-color var(--d1)}
+.cta .ic{width:24px;height:24px}
+.cta:hover{background:var(--navy-d);transform:translateY(-1px)}
+.cta:active{transform:scale(.97)}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:14px}
+.quick a{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:84px;padding:4px 2px;text-decoration:none;border-radius:12px}
+.q-ic{display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:var(--paper);border:1px solid var(--line);color:var(--navy);transition:transform var(--d2) var(--spring),background-color var(--d1),border-color var(--d1)}
+.quick a:hover .q-ic{transform:translateY(-3px);border-color:var(--navy);background:var(--tint)}
+.quick a:active .q-ic{transform:scale(.94)}
+.q-l{font-size:13.5px;line-height:1.25;color:var(--ink-2);text-align:center}
+.nw{white-space:nowrap}
+
+/* ===== bölümler: tarih çipi gibi ayraç ===== */
+.sec{padding-top:44px}
+.chip{display:table;margin:0 auto 16px;padding:7px 16px;border-radius:var(--r-pill);background:var(--chip);border:1px solid rgba(138,109,47,.55);font-size:16px;font-weight:700;line-height:1.3;text-align:center}
+.chip--sub{margin-top:36px;background:transparent;font-size:15px}
+
+/* ===== bağlantı önizlemesi (referans kartı) ===== */
+.card{width:100%;max-width:560px;padding:0;overflow:hidden}
+.b + .card,.card + .card{margin-top:12px}
+.card > a{display:block;text-decoration:none;color:inherit;border-radius:inherit;transition:background-color var(--d1)}
+.card > a:hover{background:#FBFBF9}
+.shot{display:block;margin:6px 6px 0;border-radius:var(--r-m) var(--r-m) 4px 4px;overflow:hidden;background:#EEF0F3;transition:transform var(--d3) var(--spring)}
+.shot img{display:block;width:100%}
+.card > a:hover .shot{transform:scale(1.012)}
+.card-b{display:block;padding:12px 16px 14px}
+.card h3{margin:6px 0 2px;font-size:19px}
+.desc{display:block;color:var(--ink-2);font-size:16.5px;line-height:1.5}
+.dom{display:flex;align-items:center;gap:6px;margin-top:10px;font-family:var(--mono);font-size:14px;color:var(--navy);overflow-wrap:anywhere}
+.dom .ic{width:15px;height:15px;transition:transform var(--d1) var(--eo)}
+a:hover > .card-b .dom .ic,a:hover > .dom .ic{transform:translate(2px,-2px)}
+.card--concept{background:transparent;border:1.5px dashed var(--bronze-l);box-shadow:none}
+
+/* ===== durum etiketleri ===== */
+.tag{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;line-height:1.3;color:var(--navy)}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.tag--soon{color:var(--ink-2);font-weight:600}
+.tag--soon::before{background:transparent;border:1.5px solid currentColor}
+.tag--concept{color:var(--ink-2);font-weight:600;padding:1px 8px;border:1px dashed var(--bronze);border-radius:4px}
+.tag--concept::before,.tag--dev::before{display:none}
+.tag--dev{color:var(--ink-2);font-weight:600}
+.dots{display:inline-flex;gap:3px;padding:5px 7px;border-radius:var(--r-pill);background:var(--well)}
+.dots i{width:5px;height:5px;border-radius:50%;background:var(--dot)}
+
+/* ===== FlowDesk vitrini ===== */
+.fd{width:100%;max-width:600px;padding:0;overflow:hidden}
+.fd-head{display:flex;align-items:center;gap:12px;padding:14px 16px 12px}
+.fd-head img{width:44px;height:44px;padding:4px;border-radius:12px;background:#EEEDFB;flex:none}
+.fd-name{font-size:20px;font-weight:700;line-height:1.2;color:var(--fd)}
+.fd-slogan{font-size:16px;line-height:1.4;color:var(--ink-2)}
+.fd .shot{margin:0 6px}
+.fd-body{padding:14px 16px 16px}
+.fd-body > p + p{margin-top:10px}
+.proof{display:grid;gap:6px;margin-top:16px;font-size:16px;line-height:1.45}
+.proof li{display:flex;gap:8px;align-items:flex-start}
+.proof .ic{width:18px;height:18px;margin-top:2px;color:var(--navy)}
+.verts{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.verts li{padding:4px 12px;border-radius:var(--r-pill);background:var(--well);font-size:15px}
+.fd-links{display:grid;gap:8px;margin-top:16px}
+.fd-links a{display:flex;align-items:center;justify-content:space-between;gap:10px;min-height:56px;padding:6px 14px 6px 16px;border:1px solid var(--line);border-radius:var(--r-m);text-decoration:none;transition:border-color var(--d1),background-color var(--d1)}
+.fd-links a:hover{border-color:var(--navy);background:var(--tint)}
+.fd-links b{display:block;font-size:16px;line-height:1.3}
+.fd-links .dom{margin:0}
+.fd-links .ic{color:var(--navy)}
+
+/* ===== kendi ürünlerimiz: görselsiz önizleme ===== */
+.lp{width:100%;max-width:560px;padding:6px}
+.b + .lp,.lp + .lp{margin-top:10px}
+.lp > a{display:block;text-decoration:none;color:inherit;border-radius:var(--r-m)}
+.lp-q{display:block;padding:10px 14px 12px;border-radius:var(--r-m) var(--r-m) 4px 4px;background:var(--well);box-shadow:inset 3px 0 0 var(--navy);transition:background-color var(--d1)}
+.lp > a:hover .lp-q{background:var(--tint)}
+.lp h3{margin:0 0 2px}
+.lp .dom{margin:0;padding:8px 12px 6px}
+
+/* ===== atölye: bağlantısız ===== */
+.dev{max-width:min(94%,560px)}
+.b + .dev,.dev + .dev{margin-top:10px}
+.dev h4{margin:6px 0 2px;font-size:18px;line-height:1.3;color:var(--ink)}
+
+/* ===== hakkımda: avatarlı mesaj grubu ===== */
+.from{display:flex;align-items:flex-end;gap:8px}
+.from > img{width:36px;height:36px;border-radius:50%;flex:none}
+.stack{min-width:0;flex:1}
+.stack .b{max-width:100%}
+
+/* ===== konuşalım ===== */
+.contact .cta{margin-top:18px}
+.meta{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 20px;margin-top:14px;font-size:15px;color:var(--ink-2)}
+.meta .mono{color:var(--ink)}
+.foot{text-align:center;font-size:14px;color:var(--ink-2);padding:48px 16px calc(40px + env(safe-area-inset-bottom))}
+
+/* ===== imza öğesi: yazma çubuğu ===== */
+.composer{position:fixed;left:0;right:0;bottom:0;z-index:20;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,247,244,.96);border-top:1px solid var(--line);transform:translateY(110%);visibility:hidden;transition:transform var(--d2) var(--ei),visibility 0s linear var(--d2)}
+.composer.on{transform:none;visibility:visible;transition:transform var(--d3) var(--eo),visibility 0s}
+.compose{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:656px;margin:0 auto;min-height:52px;padding:4px 4px 4px 20px;border-radius:var(--r-pill);background:var(--paper);border:1px solid var(--line);text-decoration:none;color:var(--ink-2);font-size:17px}
+.send{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;transition:transform var(--d1) var(--spring)}
+.compose:hover .send{transform:rotate(-12deg) scale(1.05)}
+.no-js .composer{display:none}
+
+/* ===== masaüstü: WhatsApp Web gibi iki bölme ===== */
+@media (min-width:1024px){
+  .wrap{max-width:1180px;display:grid;grid-template-columns:minmax(0,400px) minmax(0,680px);justify-content:space-between;gap:64px;padding:0 32px}
+  .profile{align-self:start;margin-top:40px;padding:36px 32px 24px;background:var(--paper);border:1px solid var(--line);border-radius:28px;box-shadow:var(--sh)}
+  .avatar{width:104px;height:104px}
+  .profile .typing{background:var(--bg)}
+  .profile .lead .b{background:var(--bg);box-shadow:none}
+  .thread > .sec:first-child{padding-top:40px}
+  .sec{padding-top:64px}
+}
+@media (min-width:1024px) and (min-height:760px){
+  .profile{position:sticky;top:100px}
+}
+
+/* ===== hareket ===== */
+@media (prefers-reduced-motion:no-preference){
+  .js .h-in{animation:h-in var(--d3) var(--eo) both;animation-delay:calc(var(--i,0)*60ms)}
+  .js .avatar{animation:pop-in var(--d3) var(--spring) both}
+  .js .typing{display:inline-flex;animation:typing 360ms linear 160ms both}
+  .js .typing i{animation:dot 180ms ease-in-out 160ms 2 alternate both}
+  .js .typing i:nth-child(2){animation-delay:220ms}
+  .js .typing i:nth-child(3){animation-delay:280ms}
+  .js .lead .b{animation:bubble var(--d2) var(--spring) 480ms both}
+  .js .rv{transition:opacity var(--d2) var(--eo),transform var(--d3) var(--spring)}
+  .js .rv:not(.in){opacity:0;transform:translateY(10px) scale(.94)}
+  .js .chip.rv:not(.in){transform:translateY(-6px)}
+  @supports (animation-timeline:view()){
+    /* yalnız süs: görsel kendi çerçevesinde hafifçe kayar, hiçbir an gizlenmez */
+    .shot img{animation:drift linear both;animation-timeline:view();animation-range:cover}
+  }
+}
+@keyframes h-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+@keyframes pop-in{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
+@keyframes typing{0%{opacity:0;transform:scale(.8)}20%,80%{opacity:1;transform:none}100%{opacity:0;transform:scale(.9)}}
+@keyframes dot{from{transform:translateY(0);opacity:.45}to{transform:translateY(-3px);opacity:1}}
+@keyframes bubble{from{opacity:0;transform:translateY(8px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes drift{from{transform:translateY(-2.5%) scale(1.06)}to{transform:translateY(2.5%) scale(1.06)}}
+@media (prefers-reduced-motion:reduce){
+  .cta:hover,.cta:active,.quick a:hover .q-ic,.quick a:active .q-ic,.card > a:hover .shot,a:hover > .card-b .dom .ic,a:hover > .dom .ic,.compose:hover .send{transform:none}
+  .composer{transform:none;opacity:0;transition:opacity var(--d2) linear,visibility 0s linear var(--d2)}
+  .composer.on{opacity:1;transition:opacity var(--d2) linear,visibility 0s}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4.3 20l1.2-4.1a8.2 8.2 0 1 1 3.1 3z"/><path fill="currentColor" d="M9.4 7.9c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .5-.2 1.3-1 1.7-.7.3-1.6.3-3-.4-1.9-.9-3.4-2.6-4-4-.5-1.2-.3-2.1.2-2.8z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4.5 7.5l7.5 5.5 7.5-5.5"/></g></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8.5" r="3.4"/><path d="M3.8 19.5c.8-3.2 3.3-4.9 6.2-4.9s5.4 1.7 6.2 4.9"/><path d="M18.5 7.5v6M15.5 10.5h6"/></g></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="4.6"/><circle cx="12" cy="12" r="3.7"/></g><circle cx="16.8" cy="7.2" r="1.1" fill="currentColor"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2.6"/><path d="M8.6 10.6V16M11.9 16v-5.4M11.9 13.2c0-1.6 1-2.7 2.3-2.7s2.1.9 2.1 2.6V16"/></g><circle cx="8.6" cy="7.9" r="1.1" fill="currentColor"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s-6.3-5.5-6.3-10.8a6.3 6.3 0 0 1 12.6 0C18.3 15.5 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.2"/></g></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4.5 11.8L19.5 5l-4.6 14.5-3.3-6.1z"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.5l4.5 4.5L19.5 7"/></symbol>
+</svg>
+<a class="skip" href="#icerik">Skip to content</a>
+<header class="bar" id="top"><div class="bar-in">
+  <a class="brand" href="#top"><svg viewBox="0 0 150 132" aria-hidden="true" focusable="false"><g transform="translate(10,8)" fill="none" stroke="#1F3864" stroke-linecap="round"><path stroke-width="7.5" d="M32 14L32 92M32 15H55Q72 15 72 31Q72 47 55 47H32M32 47H59Q79 47 79 69.5Q79 92 59 92H32"/><path stroke-width="5.5" d="M70 13Q84 16 90 30M73 7.5Q92 11 99 28M77 2Q101 7 108 25"/><path stroke-width="4.5" d="M70 13L77 2M90 30L108 25"/><path fill="#1F3864" stroke="none" d="M34.5 88C34 97 28 104 15 109C24 100 26.6 93 26.8 87Z"/></g></svg>Beynelmilel</a>
+  <nav class="lang" aria-label="Language"><a href="../" lang="tr" hreflang="tr">TR</a><span aria-hidden="true">·</span><a href="./" lang="en" hreflang="en" aria-current="page">EN</a></nav>
+</div></header>
+<main id="icerik" tabindex="-1" class="wrap">
+<section class="profile" aria-labelledby="ad">
+  <img class="avatar" src="../assets/logo_badge.svg" alt="Beynelmilel badge" width="84" height="84">
+  <h1 id="ad" class="h-in" style="--i:1">Yağız Ertuğrul Kaya</h1>
+  <p class="role h-in" style="--i:2">Software Developer &amp; Founder · Beynelmilel</p>
+  <p class="loc h-in" style="--i:3"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Bursa, Türkiye</p>
+  <div class="lead"><span class="typing" aria-hidden="true"><i></i><i></i><i></i></span><p class="b">Systems, websites and advertising for your business — built with the care we give our own products.</p></div>
+  <a class="cta h-in" style="--i:4" href="https://wa.me/905334765595"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>Message on WhatsApp</span></a>
+  <ul class="quick h-in" style="--i:5" aria-label="Other ways to reach me"><li><a href="mailto:yagizkaya43@gmail.com"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span><span class="q-l">Send an <span class="nw">e-mail</span></span></a></li><li><a href="../yagiz-ertugrul-kaya.vcf" type="text/vcard"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-card"/></svg></span><span class="q-l">Save contact</span></a></li><li><a href="https://www.instagram.com/yagizertugrulkaya/" target="_blank" rel="noopener"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></span><span class="q-l">Instagram</span></a></li><li><a href="https://www.linkedin.com/in/ya%C4%9F%C4%B1z-ertu%C4%9Frul-kaya-4b47281bb/" target="_blank" rel="noopener"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-in"/></svg></span><span class="q-l">LinkedIn</span></a></li></ul>
+</section>
+
+<div class="thread">
+<section class="sec" aria-labelledby="h-ne">
+  <h2 class="chip rv" id="h-ne">What Beynelmilel does</h2>
+  <p class="b rv">Beynelmilel is a software studio and agency working from Bursa, Türkiye.</p>
+  <p class="b rv">Everything we sell, we first built for ourselves: we learned multi-tenant architecture building a management system for Pilates studios, moderation and data safety building a social network for Erasmus students, and cost-performance trade-offs building AI products — all with our own money.</p>
+  <p class="b rv">We arrive at client work carrying that experience.</p>
+  <div class="b rv"><h3>Full responsibility for every project.</h3><p>What we say yes to, we own end-to-end — from design to launch.</p></div>
+  <div class="b rv"><h3>Security is not an add-on.</h3><p>Row-level access control and separated privilege tables exist from day zero of every project.</p></div>
+  <div class="b rv"><h3>All the way to production.</h3><p>We deliver products that run in production — not design files.</p></div>
+</section>
+
+<section class="sec" aria-labelledby="h-hiz">
+  <h2 class="chip rv" id="h-hiz">What we do</h2>
+  <p class="b rv">Any kind of system or professional website; we run the advertising too.</p>
+  <div class="b rv"><h3>Systems &amp; SaaS</h3><p>Custom management systems for your business: members, appointments, payments, staff — in one panel.</p><p>WhatsApp booking bot: menu, 24-hour and 2-hour reminders, cancellations, admin panel.</p></div>
+  <div class="b rv"><h3>Professional websites</h3><p>Showcase site: 4-6 pages, mobile-first, baseline SEO, privacy and cookie texts.</p><p>Showcase+: English/German, product catalogue, quote form, Google Business listing.</p></div>
+  <div class="b rv"><h3>Advertising</h3><ul class="dash"><li>Social media management</li><li>Meta and Google Ads</li><li>Ad creative (visuals and video)</li><li>Google Business and local SEO</li></ul></div>
+  <div class="b rv"><h3>Maintenance &amp; audit</h3><p>Maintenance: updates, backups, monitoring.</p><p>Technical audit: security and data-protection (KVKK/GDPR) technical report.</p></div>
+</section>
+
+<section class="sec" aria-labelledby="h-fd">
+  <h2 class="chip rv" id="h-fd">FlowDesk</h2>
+  <div class="b fd rv">
+    <div class="fd-head"><img src="../assets/flowdesk-mark-indigo.svg" alt="FlowDesk logo" width="44" height="44" loading="lazy"><div><p class="fd-name">FlowDesk</p><p class="fd-slogan">From clinic to factory: business management under one roof.</p></div></div>
+    <span class="shot"><img src="../assets/flowdesk.webp" alt="FlowDesk screenshot" width="1200" height="750" loading="lazy" decoding="async"></span>
+    <div class="fd-body">
+      <p>A multi-tenant management umbrella that unifies the shared needs of appointment-based businesses — clinics, studios, car washes, workshops. The generalised form of patterns proven in Studia.</p>
+      <p>Instead of separate software per industry, the shared backbone is written once and correctly: members, calendar, payments, staff. Industry differences plug in as modules.</p>
+      <ul class="proof"><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span>98 database tests + 49 unit tests green</span></li><li><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-check"/></svg><span>KVKK/GDPR toolkit: data export, right to erasure, consent flow</span></li></ul>
+      <ul class="verts" aria-label="Industries"><li>Clinic</li><li>Studio</li><li>Factory</li><li>Car wash</li></ul>
+      <div class="fd-links"><a href="https://flowdesksolutions.com" target="_blank" rel="noopener"><span><b>Overview</b><span class="dom">flowdesksolutions.com</span></span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a><a href="https://app.flowdesksolutions.com" target="_blank" rel="noopener"><span><b>App</b><span class="dom">app.flowdesksolutions.com</span></span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="h-is">
+  <h2 class="chip rv" id="h-is">Work we delivered</h2>
+  <article class="b card rv"><a href="https://yagizlastik.com" target="_blank" rel="noopener">
+    <span class="shot"><img src="../assets/yagizlastik.webp" alt="Yağız Lastik Sanayi screenshot" width="1200" height="750" loading="lazy" decoding="async"></span>
+    <div class="card-b"><span class="tag">Live</span><h3>Yağız Lastik Sanayi</h3><span class="desc">A trilingual (TR/EN/DE) corporate site for a factory manufacturing from Bursa to the world. No framework, no dependencies, nothing to break.</span><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>yagizlastik.com</span></div>
+  </a></article>
+  <article class="b card rv"><a href="https://viva-pilates-sigma.vercel.app" target="_blank" rel="noopener">
+    <span class="shot"><img src="../assets/studia.webp" alt="Studia screenshot" width="1200" height="780" loading="lazy" decoding="async"></span>
+    <div class="card-b"><span class="tag">Live</span><h3>Studia</h3><span class="desc">End-to-end management for Pilates studios: members, class schedules, attendance, packages and instalment payments in one panel. The first studio is live and uses it every day.</span><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>viva-pilates-sigma.vercel.app</span></div>
+  </a></article>
+  <article class="b card rv"><a href="https://ayplastik.vercel.app" target="_blank" rel="noopener">
+    <span class="shot"><img src="../assets/ayplastik.webp" alt="AY Plastik screenshot" width="1200" height="750" loading="lazy" decoding="async"></span>
+    <div class="card-b"><span class="tag tag--soon">Launching</span><h3>AY Plastik</h3><span class="desc">A TR+EN corporate site for a Bursa plastics-packaging factory founded in 1976; 32 pages with product specifications.</span><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>ayplastik.vercel.app</span></div>
+  </a></article>
+  <article class="b card rv"><a href="https://pilates-ebru-cosar.vercel.app" target="_blank" rel="noopener">
+    <span class="shot"><img src="../assets/pilatesebrucosar.webp" alt="Pilates Ebru Coşar screenshot" width="1200" height="750" loading="lazy" decoding="async"></span>
+    <div class="card-b"><span class="tag tag--soon">Coming soon</span><h3>Pilates Ebru Coşar</h3><span class="desc">A one-page showcase site for a reformer studio in Nilüfer, Bursa.</span><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>pilates-ebru-cosar.vercel.app</span></div>
+  </a></article>
+  <article class="b card rv"><a href="https://astromarin-app.vercel.app" target="_blank" rel="noopener">
+    <span class="shot"><img src="../assets/astro.webp" alt="Astro Marin screenshot" width="1200" height="780" loading="lazy" decoding="async"></span>
+    <div class="card-b"><span class="tag">Live</span><h3>Astro Marin</h3><span class="desc">A full-scope astrology platform, from natal charts to astrocartography.</span><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>astromarin-app.vercel.app</span></div>
+  </a></article>
+  <article class="b card rv card--concept"><a href="https://epot-tasarim-onerileri.vercel.app" target="_blank" rel="noopener">
+    <span class="shot"><img src="../assets/epot.webp" alt="EPOT Mühendislik screenshot" width="1200" height="750" loading="lazy" decoding="async"></span>
+    <div class="card-b"><span class="tag tag--concept">Concept study</span><h3>EPOT Mühendislik</h3><span class="desc">Six design concepts for a Bursa company that has built harmonic-filtered compensation panels since 1980.</span><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>epot-tasarim-onerileri.vercel.app</span></div>
+  </a></article>
+</section>
+
+<section class="sec" aria-labelledby="h-urun">
+  <h2 class="chip rv" id="h-urun">Our own products</h2>
+  <p class="b rv">Taken live with our own money and our own name on them.</p>
+  <article class="b lp rv"><a href="https://flowdesksolutions.com" target="_blank" rel="noopener"><div class="lp-q"><h3>FlowDesk</h3><span class="desc">From clinic to factory: business management under one roof.</span></div><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>flowdesksolutions.com</span></a></article>
+  <article class="b lp rv"><a href="https://www.solavoy.com" target="_blank" rel="noopener"><div class="lp-q"><h3>Solavoy</h3><span class="desc">Where to, on what budget — Solavoy plans the rest. An AI-assisted travel planner in eight languages.</span></div><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>solavoy.com</span></a></article>
+  <article class="b lp rv"><a href="https://erasocial.vercel.app" target="_blank" rel="noopener"><div class="lp-q"><h3>Erasocial</h3><span class="desc">Erasmus students, meeting in the same city.</span></div><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>erasocial.vercel.app</span></a></article>
+  <article class="b lp rv"><a href="https://sanayiaiapp.com" target="_blank" rel="noopener"><div class="lp-q"><h3>Sanayi AI</h3><span class="desc">The Turkish manufacturer's AI desk.</span></div><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>sanayiaiapp.com</span></a></article>
+  <article class="b lp rv"><a href="https://butcem-three.vercel.app" target="_blank" rel="noopener"><div class="lp-q"><h3>Bütçem</h3><span class="desc">No bank connection, no surprises: mindful budgeting.</span></div><span class="dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>butcem-three.vercel.app</span></a></article>
+  <h3 class="chip chip--sub rv" id="h-atolye">In the workshop</h3>
+  <p class="b rv">Not yet public — growing on our desk.</p>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>djmix</h4><p class="desc">Desktop DJ setup with an Auto-Mix engine: type the track names, get a DJ-grade mix. Live Auto DJ, FX, loops, MIDI.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>Oto Yıkama randevu</h4><p class="desc">A no-show customer is a lost day. Takes bookings over WhatsApp and sends automatic reminders, built for small car washes.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>snackboxd</h4><p class="desc">Letterboxd for snacks: a 53,000-product catalogue with ratings and reviews.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>Beynelmilel Platform</h4><p class="desc">A data-fusion platform with link analysis, geo-temporal queries and attribute-based access control. Our most ambitious R&amp;D project.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>JARVIS</h4><p class="desc">Tasks, projects, markets and a real Claude terminal — in one desktop app. A personal command centre.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>FablePlanGen</h4><p class="desc">A desktop tool that turns a project idea into a structured, actionable deep plan.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>janestreet-sim</h4><p class="desc">A quant training simulator that tests market making, ETF arbitrage and statistical arbitrage with virtual money.</p></article>
+  <article class="b dev rv"><span class="tag tag--dev"><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>In development</span><h4>CLI ajanlar</h4><p class="desc">Three command-line agents: lead research, weekly competitor reports, SEO content drafts.</p></article>
+</section>
+
+<section class="sec" aria-labelledby="h-ben">
+  <h2 class="chip rv" id="h-ben">About me</h2>
+  <div class="from">
+    <img src="../assets/logo_badge.svg" alt="Beynelmilel badge" width="36" height="36" loading="lazy">
+    <div class="stack">
+      <p class="b rv">Yağız Ertuğrul Kaya. I live in Bursa, Türkiye; I founded Beynelmilel and run it on my own.</p>
+      <p class="b rv">Everything I sell, I first built for myself; I take a project end-to-end, from design to infrastructure, from launch to security.</p>
+      <p class="b rv">For a new project, WhatsApp is the fastest way to reach me.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec contact" aria-labelledby="h-yaz">
+  <h2 class="chip rv" id="h-yaz">Let's talk</h2>
+  <p class="b rv">An idea, an order or just a question — write, and I'll reply the same day.</p>
+  <a class="cta" href="https://wa.me/905334765595"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>Message on WhatsApp</span></a>
+  <ul class="quick" aria-label="Other ways to reach me"><li><a href="mailto:yagizkaya43@gmail.com"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span><span class="q-l">Send an <span class="nw">e-mail</span></span></a></li><li><a href="../yagiz-ertugrul-kaya.vcf" type="text/vcard"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-card"/></svg></span><span class="q-l">Save contact</span></a></li><li><a href="https://www.instagram.com/yagizertugrulkaya/" target="_blank" rel="noopener"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></span><span class="q-l">Instagram</span></a></li><li><a href="https://www.linkedin.com/in/ya%C4%9F%C4%B1z-ertu%C4%9Frul-kaya-4b47281bb/" target="_blank" rel="noopener"><span class="q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-in"/></svg></span><span class="q-l">LinkedIn</span></a></li></ul>
+  <p class="meta"><span>Location: Bursa, Türkiye</span><span>Web: <span class="mono">beynelmilel.org</span></span></p>
+</section>
+</div>
+</main>
+
+<footer class="foot">© 2026 Beynelmilel · Bursa, Türkiye</footer>
+
+<div class="composer"><a class="compose" href="https://wa.me/905334765595"><span>Message on WhatsApp</span><span class="send"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-send"/></svg></span></a></div>
+
+<script>
+(function(){
+  var d=document;
+  /* kaydırınca görünme: .rv -> .in; aynı anda girenler 70ms arayla */
+  var rv=[].slice.call(d.querySelectorAll('.rv'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      var k=0;
+      es.forEach(function(e){
+        if(!e.isIntersecting)return;
+        e.target.style.transitionDelay=Math.min(k++,5)*70+'ms';
+        e.target.classList.add('in');io.unobserve(e.target);
+      });
+    },{rootMargin:'0px 0px -6% 0px',threshold:.06});
+    rv.forEach(function(el){io.observe(el)});
+  }else rv.forEach(function(el){el.classList.add('in')});
+
+  /* ilk ekran hafif kalsın: tembel görseller sayfa yüklenip tarayıcı boşa çıkınca alınır (Save-Data açıksa alınmaz) */
+  var c=navigator.connection;
+  if(!(c&&c.saveData))window.addEventListener('load',function(){
+    var go=function(){[].forEach.call(d.querySelectorAll('img[loading="lazy"]'),function(i){i.loading='eager'})};
+    'requestIdleCallback' in window?requestIdleCallback(go,{timeout:1500}):setTimeout(go,600);
+  });
+
+  /* yazma çubuğu: üstteki WhatsApp düğmesi ekrandan çıkınca gelir, sondaki düğme görünürken çekilir */
+  var comp=d.querySelector('.composer'),top=d.querySelector('.profile .cta'),end=d.querySelector('.contact .cta');
+  if(comp&&top&&end&&'IntersectionObserver' in window){
+    var past=false,near=false;
+    var sync=function(){comp.classList.toggle('on',past&&!near)};
+    new IntersectionObserver(function(es){var e=es[es.length-1];past=!e.isIntersecting&&e.boundingClientRect.top<0;sync()}).observe(top);
+    new IntersectionObserver(function(es){var e=es[es.length-1];near=e.isIntersecting||e.boundingClientRect.top<0;sync()}).observe(end);
+  }
+})();
+</script>
+</body>
+</html>

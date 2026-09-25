@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="tr" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tasarım yönleri · Beynelmilel dijital kartvizit</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../kaynak/assets/logo_mark_300.png">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+<style>
+@font-face{font-family:"Instrument Sans";src:url(../kaynak/assets/fonts/instrumentsans-latin-ext.woff2) format("woff2");font-weight:400 700;font-stretch:75% 100%;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Instrument Sans";src:url(../kaynak/assets/fonts/instrumentsans-latin.woff2) format("woff2");font-weight:400 700;font-stretch:75% 100%;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Next";src:url(../kaynak/assets/fonts/atkinsonnext-latin-ext.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible Next";src:url(../kaynak/assets/fonts/atkinsonnext-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Atkinson Hyperlegible Mono";src:url(../kaynak/assets/fonts/atkinsonmono-latin-ext.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Atkinson Hyperlegible Mono";src:url(../kaynak/assets/fonts/atkinsonmono-latin.woff2) format("woff2");font-weight:400 600;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Bitter";src:url(../kaynak/assets/fonts/bitter-latin-ext.woff2) format("woff2");font-weight:500 800;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Bitter";src:url(../kaynak/assets/fonts/bitter-latin.woff2) format("woff2");font-weight:500 800;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Public Sans";src:url(../kaynak/assets/fonts/publicsans-latin-ext.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF}
+@font-face{font-family:"Public Sans";src:url(../kaynak/assets/fonts/publicsans-latin.woff2) format("woff2");font-weight:400 700;font-style:normal;font-display:swap;unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+/* ===== ortak hareket dili (pilates variant-4 token'ları) ===== */
+:root{--d1:160ms;--d2:280ms;--d3:400ms;--d4:560ms;--eo:cubic-bezier(.16,1,.3,1);--ei:cubic-bezier(.5,0,.9,.4);--spring:cubic-bezier(.34,1.45,.64,1)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{margin:0;background:#E7E5E1;color:#17181A;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+img{max-width:100%}
+h1,h2,h3,p,ul,figure{margin:0}
+ul{padding:0;list-style:none}
+a{color:inherit}
+.ic{width:20px;height:20px;flex:none}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ===== önizleme çerçevesi (tasarımın parçası değil) ===== */
+.pv-skip{position:absolute;left:8px;top:-60px;z-index:99;background:#17181A;color:#fff;padding:12px 16px;border-radius:6px}
+.pv-skip:focus{top:8px}
+.pv-bar{background:#17181A;color:#EDEBE7;padding:12px 16px;display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between}
+.pv-title{font-size:14px;margin:0;color:#C9C6C0}
+.pv-title b{color:#F4F2EE;font-weight:600}
+.pv-tabs{display:flex;gap:6px;flex-wrap:wrap}
+.pv-tabs button,.pv-view button{font:inherit;font-size:14px;min-height:44px;padding:0 14px;border-radius:6px;border:1px solid #3A3B3F;background:transparent;color:#EDEBE7;cursor:pointer;transition:background var(--d1),border-color var(--d1)}
+.pv-tabs button:hover,.pv-view button:hover{border-color:#8A8B90}
+.pv-tabs button[aria-selected="true"],.pv-view button[aria-pressed="true"]{background:#F4F2EE;color:#17181A;border-color:#F4F2EE}
+.pv-view{display:none;gap:6px;align-items:center;font-size:13px;color:#A9A7A2}
+.pv-bar :focus-visible{outline:2px solid #F4F2EE;outline-offset:2px}
+@media (min-width:720px){.pv-view{display:flex}}
+.pv-panel[hidden]{display:none}
+.no-js .pv-tabs{display:none}
+.pv-intro{max-width:1240px;margin:0 auto;padding:32px 16px 28px;display:grid;gap:24px;font-size:15px;line-height:1.6;color:#2B2C30}
+.pv-intro p+p{margin-top:10px}
+.pv-k{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#5A5B60}
+.pv-name{font-size:34px;line-height:1.1;margin:4px 0 12px;color:#17181A}
+.pv-note{font-size:13.5px;color:#55565B}
+.pv-pal{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:10px}
+.pv-pal li{font-size:12px;line-height:1.35}
+.pv-pal span{display:block;height:44px;border-radius:6px;border:1px solid rgba(23,24,26,.14);margin-bottom:6px}
+.pv-pal code{font-size:12.5px;font-weight:600;color:#17181A}
+.pv-pal small{display:block;color:#55565B;font-size:11.5px}
+.pv-type{margin-top:18px;padding:18px;background:#F4F2EE;border-radius:8px}
+.pv-t1{font-size:30px;line-height:1.15;color:#1F3864}
+.pv-t2{font-size:16px;margin-top:6px}
+.pv-t3{font-size:12.5px;color:#55565B;margin-top:10px}
+@media (min-width:900px){.pv-intro{grid-template-columns:1.05fr 1fr;gap:48px;padding:48px 32px 36px}}
+.pv-frame{padding:0 0 64px}
+body.pv-phone .stage{max-width:412px;margin-inline:auto;box-shadow:0 0 0 1px rgba(23,24,26,.12),0 24px 60px -24px rgba(23,24,26,.35);border-radius:4px}
+
+/* ===== ortak sahne ===== */
+.stage{container:stage/inline-size;overflow-x:clip;position:relative}
+.skip{position:absolute;left:12px;top:12px;z-index:20;padding:12px 16px;border-radius:6px;background:#1F3864;color:#fff;text-decoration:none;transition:transform var(--d1) var(--eo)}
+.skip:not(:focus){clip-path:inset(50%);width:1px;height:1px;overflow:hidden;white-space:nowrap;padding:0}
+.lang{display:flex;align-items:center;gap:2px;font-size:14px;letter-spacing:.04em}
+.lang a{display:inline-grid;place-items:center;min-width:44px;min-height:44px;text-decoration:none;border-radius:6px}
+.lang a[aria-current]{font-weight:700}
+.lang-off{opacity:.62;cursor:default}
+.lang span{opacity:.5}
+.stage :focus-visible{outline:2px solid #1F3864;outline-offset:3px;border-radius:4px}
+main:focus{outline:none}
+
+/* giriş koreografisi — yalnız JS varken ve .play sınıfıyla */
+@media (prefers-reduced-motion:no-preference){
+  .js .play .h-in{animation:h-in var(--d3) var(--eo) both;animation-delay:calc(var(--i,0)*60ms)}
+  .js .rv{transition:opacity var(--d4) var(--eo),transform var(--d4) var(--eo);transition-delay:calc(var(--i,0)*80ms)}
+  .js .rv:not(.in){opacity:0;transform:translateY(18px)}
+}
+@keyframes h-in{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+
+/* =========================================================
+   V1 — YALDIZ KART
+   ========================================================= */
+.v1{--bg:#F6F4F1;--surface:#FDFCFA;--ink:#17181A;--ink-2:#55565B;--navy:#1F3864;--navy-d:#172B4D;--bronze:#8A6D2F;--line:#DCD7CF;--r-s:6px;--r-m:10px;
+  --sh-card:0 1px 1px rgba(23,24,26,.06),0 12px 24px -12px rgba(31,56,100,.28),0 32px 64px -32px rgba(23,24,26,.30);
+  --sh-lift:0 2px 2px rgba(23,24,26,.05),0 18px 36px -18px rgba(31,56,100,.30);
+  background:var(--bg);color:var(--ink);font-family:"Instrument Sans",system-ui,sans-serif;font-size:17px;line-height:1.6}
+.v1-wrap{max-width:1320px;margin:0 auto;padding:0 20px}
+.v1-rail{padding-bottom:8px}
+.v1-nav{display:flex;align-items:center;justify-content:space-between;min-height:64px}
+.v1-brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-weight:600;font-size:17px;text-decoration:none;color:var(--navy)}
+.v1-brand img{width:28px;height:auto}
+.v1 .lang{color:var(--ink)}
+.v1-hold{margin:8px 0 0;perspective:900px;transition:transform var(--d2) var(--eo)}
+.v1-card{position:relative;aspect-ratio:85/55;display:flex;flex-direction:column;justify-content:space-between;gap:10px;padding:20px 22px 18px;background:var(--surface);border-radius:var(--r-m);box-shadow:var(--sh-card);isolation:isolate}
+.v1-card::before{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--navy);transform:translate(9px,10px) rotate(1.5deg);box-shadow:var(--sh-card)}
+.v1-card::after{content:"";position:absolute;inset:0;z-index:-1;border-radius:inherit;background:var(--surface)}
+.v1-card-mark{width:40px;height:auto}
+.v1-name{font-size:clamp(25px,7.4cqi,33px);line-height:1.1;font-weight:600;font-stretch:84%;letter-spacing:-.012em;color:var(--ink)}
+.v1-title{font-size:14.5px;line-height:1.4;color:var(--ink-2);margin-top:6px}
+.v1-foil{position:relative;display:block;height:2px;width:72px;background:var(--bronze);overflow:hidden;border-radius:1px}
+.v1-foil::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,246,222,.95),transparent);transform:translateX(-110%)}
+.v1-loc{display:flex;align-items:center;gap:6px;font-size:14px;color:var(--ink-2)}
+.v1-loc .ic{width:16px;height:16px;color:var(--navy)}
+.v1-line{font-size:21px;line-height:1.35;font-weight:500;letter-spacing:-.005em;margin:28px 0 20px;max-width:24ch}
+.v1-actions{display:grid;gap:10px}
+.v1-btn{display:flex;align-items:center;justify-content:center;gap:9px;min-height:48px;padding:0 14px;border:1px solid var(--line);border-radius:var(--r-s);background:var(--surface);text-decoration:none;font-size:15.5px;font-weight:500;color:var(--ink);transition:transform var(--d1) var(--eo),border-color var(--d1),background-color var(--d1),box-shadow var(--d2) var(--eo)}
+.v1-btn .ic{color:var(--navy)}
+.v1-btn:hover{border-color:var(--navy);background:#fff}
+.v1-btn:active{transform:scale(.98)}
+.v1-btn--wa{min-height:56px;background:var(--navy);border-color:var(--navy);color:#fff;font-size:17px;font-weight:600;box-shadow:0 10px 20px -12px rgba(31,56,100,.7)}
+.v1-btn--wa .ic{color:#fff;width:22px;height:22px}
+.v1-btn--wa:hover{background:var(--navy-d);border-color:var(--navy-d);box-shadow:0 14px 26px -12px rgba(31,56,100,.8)}
+.v1-more{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.v1-main{padding-bottom:48px}
+.v1-sec{padding-top:88px}
+.v1-head{max-width:60ch;margin-bottom:32px}
+.v1-head h2{font-size:clamp(28px,8cqi,40px);line-height:1.12;font-weight:600;font-stretch:88%;letter-spacing:-.015em;color:var(--ink)}
+.v1-head p{margin-top:12px;color:var(--ink-2);font-size:18px}
+.v1-svc{display:grid;gap:0}
+.v1-svc li{padding:22px 0 26px;border-top:1px solid var(--line)}
+.v1-svc h3{font-size:21px;line-height:1.25;font-weight:600;margin-bottom:8px;color:var(--navy)}
+.v1-svc p{color:var(--ink-2);max-width:62ch}
+.v1-svc p+p{margin-top:6px}
+.v1 .svc-list{display:flex;flex-wrap:wrap;gap:8px 18px;color:var(--ink-2)}
+.v1 .svc-list li{position:relative;padding:0 0 0 14px;border:0}
+.v1 .svc-list li::before{content:"";position:absolute;left:0;top:.68em;width:6px;height:6px;background:var(--bronze);border-radius:1px}
+.v1-work{display:grid;gap:48px}
+.v1-shot{display:block;border-radius:8px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 1px 1px rgba(23,24,26,.04);transition:transform var(--d3) var(--eo),box-shadow var(--d3) var(--eo)}
+.v1-shot img{display:block;width:100%;height:auto}
+.v1-item:hover .v1-shot{transform:translateY(-4px);box-shadow:var(--sh-lift)}
+.v1-concept .v1-shot{border:1px dashed #A48A52;padding:10px;background:transparent}
+.v1-concept .v1-shot img{border-radius:4px}
+.v1-meta{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;margin:18px 0 6px}
+.v1-meta h3{font-size:21px;line-height:1.25;font-weight:600}
+.v1-item p{color:var(--ink-2);font-size:16.5px;max-width:60ch}
+.v1-tag{display:inline-flex;align-items:center;gap:7px;height:26px;padding:0 10px;border-radius:999px;font-size:13px;font-weight:600;line-height:1}
+.v1-tag::before{content:"";width:7px;height:7px;border-radius:50%}
+.v1-tag--live{background:#E4E9F1;color:var(--navy)}
+.v1-tag--live::before{background:var(--navy)}
+.v1-tag--soon{border:1px solid var(--line);color:var(--ink-2)}
+.v1-tag--soon::before{border:1.5px solid var(--ink-2)}
+.v1-tag--concept{border:1px dashed var(--bronze);border-radius:3px;color:var(--ink-2);font-weight:500}
+.v1-tag--concept::before{display:none}
+.v1-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:4px;font-size:15px;font-weight:600;color:var(--navy);text-decoration:none;overflow-wrap:anywhere}
+.v1-link span{text-decoration:underline;text-decoration-color:transparent;text-underline-offset:4px;transition:text-decoration-color var(--d1)}
+.v1-link:hover span{text-decoration-color:currentColor}
+.v1-link .ic{width:16px;height:16px;transition:transform var(--d1) var(--eo)}
+.v1-link:hover .ic{transform:translate(2px,-2px)}
+.v1-foot{margin-top:96px;padding:24px 0 8px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-2)}
+
+@container stage (min-width:720px){
+  .v1-wrap{padding:0 40px}
+  .v1-card{max-width:440px}
+  .v1-more{grid-template-columns:repeat(4,1fr)}
+  .v1-actions{max-width:640px}
+  .v1-svc{grid-template-columns:1fr 1fr;column-gap:40px}
+  .v1-work{grid-template-columns:1fr 1fr;gap:56px 36px}
+}
+@container stage (min-width:1040px){
+  .v1-wrap{display:grid;grid-template-columns:minmax(360px,420px) 1fr;gap:88px;padding:0 56px}
+  .v1-rail{position:sticky;top:0;align-self:start;padding:8px 0 32px}
+  .v1-nav{min-height:80px}
+  .v1-more{grid-template-columns:1fr 1fr}
+  .v1-sec{padding-top:112px}
+  .v1-sec:first-child{padding-top:152px}
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .v1.play .v1-card{animation:v1-land var(--d4) var(--eo) both}
+  .js .v1.play .v1-card::before{animation:v1-fan var(--d4) var(--eo) 80ms both}
+  .js .v1.play .v1-foil::after{animation:v1-sheen 480ms cubic-bezier(.4,0,.2,1) 120ms both}
+  /* modern tarayıcı: iş görselleri kaydırmayla bağlanır; uygulama-içi tarayıcı: .rv/.in yedeği */
+  @supports (animation-timeline:view()){
+    .js .v1 .v1-work .rv{opacity:1;transform:none;transition:none;animation:v1-rise linear both;animation-timeline:view();animation-range:entry 0% entry 70%}
+  }
+}
+@keyframes v1-land{from{opacity:0;transform:translateY(28px) rotateX(14deg) scale(.97)}to{opacity:1;transform:none}}
+@keyframes v1-fan{from{transform:translate(0,0) rotate(0)}to{transform:translate(9px,10px) rotate(1.5deg)}}
+@keyframes v1-sheen{from{transform:translateX(-110%)}to{transform:translateX(260%)}}
+@keyframes v1-rise{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+
+/* =========================================================
+   V2 — SOHBET
+   ========================================================= */
+.v2{--bg:#F7F7F4;--paper:#FFFFFF;--ink:#17181A;--ink-2:#4E5057;--navy:#1F3864;--navy-d:#172B4D;--tint:#E6EAF2;--bronze:#8A6D2F;--line:#E2E0DA;--r-b:20px;
+  background:var(--bg);color:var(--ink);font-family:"Atkinson Hyperlegible Next",system-ui,sans-serif;font-size:18px;line-height:1.55}
+.v2-bar{position:sticky;top:0;z-index:10;background:rgba(247,247,244,.97);border-bottom:1px solid var(--line)}
+.v2-bar-in{max-width:680px;margin:0 auto;padding:0 12px 0 16px;min-height:60px;display:flex;align-items:center;justify-content:space-between}
+.v2-brand{display:inline-flex;align-items:center;gap:9px;min-height:44px;font-weight:700;font-size:17px;color:var(--navy);text-decoration:none}
+.v2-col{max-width:680px;margin:0 auto;padding:0 16px}
+.v2-profile{text-align:center;padding:24px 0 8px}
+.v2-avatar{display:block;width:88px;height:88px;margin:0 auto 12px;border-radius:50%}
+.v2-profile h1{font-size:clamp(26px,7.4cqi,32px);line-height:1.15;font-weight:700;letter-spacing:-.01em}
+.v2-title{color:var(--ink-2);font-size:16px;margin-top:4px}
+.v2-loc{display:inline-flex;align-items:center;gap:5px;color:var(--ink-2);font-size:15px;margin-top:2px}
+.v2-loc .ic{width:16px;height:16px;color:var(--navy)}
+.v2-lead{position:relative;text-align:left;margin:22px 0 18px;min-height:64px}
+.v2-typing{position:absolute;left:0;top:0;display:none;gap:5px;padding:14px 16px;background:var(--paper);border:1px solid var(--line);border-radius:var(--r-b) var(--r-b) var(--r-b) 6px}
+.v2-typing i{width:7px;height:7px;border-radius:50%;background:#8C8E94}
+.v2-bubble{position:relative;width:fit-content;max-width:min(92%,580px);background:var(--paper);border:1px solid var(--line);border-radius:var(--r-b) var(--r-b) var(--r-b) 6px;padding:13px 18px 14px;box-shadow:0 1px 0 rgba(23,24,26,.04);transform-origin:0 100%}
+.v2-bubble + .v2-bubble{margin-top:8px}
+.v2-bubble--lead{max-width:100%;font-size:19px;line-height:1.4;font-weight:600}
+.v2-bubble h3{font-size:18px;font-weight:700;color:var(--navy);margin-bottom:4px}
+.v2-bubble p+p{margin-top:6px}
+.v2-bubble p,.v2 .svc-list{color:var(--ink)}
+.v2 .svc-list li{position:relative;padding-left:16px}
+.v2 .svc-list li::before{content:"";position:absolute;left:2px;top:.72em;width:5px;height:5px;border-radius:50%;background:var(--navy)}
+.v2-cta{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;border-radius:999px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:18px;box-shadow:0 10px 22px -14px rgba(31,56,100,.75);transition:transform var(--d1) var(--spring),background-color var(--d1)}
+.v2-cta .ic{width:24px;height:24px}
+.v2-cta:hover{background:var(--navy-d);transform:translateY(-1px)}
+.v2-cta:active{transform:scale(.97)}
+.v2-quick{display:grid;grid-template-columns:repeat(4,1fr);gap:4px;margin-top:14px}
+.v2-quick a{display:flex;flex-direction:column;align-items:center;gap:6px;min-height:76px;padding:4px 0;text-decoration:none;border-radius:12px}
+.v2-q-ic{display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:var(--paper);border:1px solid var(--line);color:var(--navy);transition:transform var(--d2) var(--spring),background-color var(--d1),border-color var(--d1)}
+.v2-quick a:hover .v2-q-ic{transform:translateY(-3px);border-color:var(--navy);background:var(--tint)}
+.v2-quick a:active .v2-q-ic{transform:scale(.94)}
+.v2-q-l{font-size:13.5px;line-height:1.2;color:var(--ink-2);text-align:center}
+.v2-sec{padding-top:40px}
+.v2-chip{display:table;margin:0 auto 18px;padding:7px 16px;border-radius:999px;background:#EFEDE7;border:1px solid rgba(138,109,47,.55);font-size:17px;font-weight:700;letter-spacing:.01em;color:var(--ink)}
+.v2-card{padding:0;overflow:hidden;width:100%;max-width:560px}
+.v2-card + .v2-card{margin-top:14px}
+.v2-card a{display:block;text-decoration:none;color:inherit;border-radius:inherit;transition:background-color var(--d1)}
+.v2-shot{display:block;margin:6px 6px 0;border-radius:14px 14px 4px 4px;overflow:hidden;background:#EEF0F3;transition:transform var(--d3) var(--spring)}
+.v2-shot img{display:block;width:100%;height:auto}
+.v2-card a:hover .v2-shot{transform:scale(1.012)}
+.v2-card a:hover{background:#FBFBF9}
+.v2-card-b{display:block;padding:12px 16px 14px}
+.v2-card h3{margin:4px 0 2px;font-size:19px}
+.v2-desc{display:block;color:var(--ink-2);font-size:16.5px}
+.v2-dom{display:flex;align-items:center;gap:6px;margin-top:10px;font-family:"Atkinson Hyperlegible Mono",ui-monospace,monospace;font-size:14px;color:var(--navy);overflow-wrap:anywhere}
+.v2-dom .ic{width:15px;height:15px;transition:transform var(--d1) var(--eo)}
+.v2-card a:hover .v2-dom .ic{transform:translate(2px,-2px)}
+.v2-tag{display:inline-flex;align-items:center;gap:7px;font-size:14px;font-weight:700;color:var(--navy)}
+.v2-tag::before{content:"";width:8px;height:8px;border-radius:50%;background:currentColor}
+.v2-tag--soon{color:var(--ink-2);font-weight:600}
+.v2-tag--soon::before{background:transparent;border:1.5px solid currentColor}
+.v2-concept{background:transparent;border:1.5px dashed #A48A52;box-shadow:none}
+.v2-concept .v2-shot{opacity:.94}
+.v2-tag--concept{color:var(--ink-2);font-weight:600;padding:1px 8px;border:1px dashed var(--bronze);border-radius:4px}
+.v2-tag--concept::before{display:none}
+.v2-foot{text-align:center;font-size:14px;color:var(--ink-2);padding:56px 0 28px}
+.v2-composer{position:sticky;bottom:0;z-index:9;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(247,247,244,.97);border-top:1px solid var(--line);transform:translateY(110%);transition:transform var(--d2) var(--ei)}
+.v2-composer.on{transform:none;transition:transform var(--d3) var(--eo)}
+.v2-compose{display:flex;align-items:center;justify-content:space-between;gap:12px;max-width:656px;margin:0 auto;min-height:52px;padding:4px 4px 4px 20px;border-radius:999px;background:var(--paper);border:1px solid var(--line);text-decoration:none;color:var(--ink-2);font-size:17px}
+.v2-send{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--navy);color:#fff;transition:transform var(--d1) var(--spring)}
+.v2-compose:hover .v2-send{transform:rotate(-12deg) scale(1.05)}
+.no-js .v2-composer{display:none}
+
+@container stage (min-width:720px){
+  .v2-profile{padding-top:48px}
+  .v2-avatar{width:104px;height:104px}
+  .v2-cta{max-width:420px;margin:0 auto}
+  .v2-quick{max-width:420px;margin:14px auto 0}
+  .v2-sec{padding-top:64px}
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .v2 .rv{transition:opacity var(--d2) var(--eo),transform var(--d3) var(--spring);transition-delay:calc(var(--i,0)*80ms)}
+  .js .v2 .rv:not(.in){opacity:0;transform:translateY(10px) scale(.94)}
+  .js .v2 .v2-chip.rv:not(.in){transform:translateY(-6px)}
+  .js .v2.play .v2-typing{display:inline-flex;animation:v2-typing 320ms linear 80ms both}
+  .js .v2.play .v2-typing i{animation:v2-dot 300ms ease-in-out infinite alternate}
+  .js .v2.play .v2-typing i:nth-child(2){animation-delay:100ms}
+  .js .v2.play .v2-typing i:nth-child(3){animation-delay:200ms}
+  .js .v2.play .v2-bubble--lead{animation:v2-pop var(--d2) var(--spring) 320ms both}
+  .js .v2.play .v2-avatar{animation:v2-avatar var(--d3) var(--spring) both}
+}
+@keyframes v2-typing{0%{opacity:0;transform:scale(.8)}20%,85%{opacity:1;transform:none}100%{opacity:0;transform:scale(.9)}}
+@keyframes v2-dot{from{transform:translateY(0);opacity:.45}to{transform:translateY(-3px);opacity:1}}
+@keyframes v2-pop{from{opacity:0;transform:translateY(8px) scale(.9)}to{opacity:1;transform:none}}
+@keyframes v2-avatar{from{opacity:0;transform:scale(.86)}to{opacity:1;transform:none}}
+
+/* =========================================================
+   V3 — KAŞE
+   ========================================================= */
+.v3{--bg:#F6F4F1;--paper:#FFFFFF;--ink:#17181A;--ink-2:#505259;--stamp:#1F3864;--stamp-d:#172B4D;--tint:#E7EBF2;--bronze:#8A6D2F;--field:#C5CBD6;--r:6px;
+  background:var(--bg);color:var(--ink);font-family:"Public Sans",system-ui,sans-serif;font-size:17px;line-height:1.6}
+.v3-head,.v3-hero,.v3-main,.v3-foot{max-width:1200px;margin:0 auto;padding-inline:20px}
+.v3-head{display:flex;align-items:center;justify-content:space-between;min-height:68px;border-bottom:2px solid var(--stamp)}
+.v3-brand{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-family:"Bitter",Cambria,serif;font-weight:700;font-size:19px;color:var(--stamp);text-decoration:none}
+.v3 .lang{color:var(--stamp);font-weight:500}
+.v3-hero{padding-top:36px;padding-bottom:12px}
+.v3-stamp{display:inline-block;max-width:100%;padding:6px;border:3px solid var(--stamp);border-radius:10px;color:var(--stamp);transform:rotate(-2deg);transform-origin:40% 60%}
+.v3-stamp-in{border:1.25px solid var(--stamp);border-radius:5px;padding:14px 20px 16px;text-align:center}
+.v3-stamp-org{display:block;font-family:"Bitter",Cambria,serif;font-weight:800;font-size:13px;letter-spacing:.32em;margin-right:-.32em;padding-bottom:8px;margin-bottom:10px;border-bottom:1.25px solid var(--stamp)}
+.v3-stamp h1{font-family:"Bitter",Cambria,serif;font-weight:700;font-size:clamp(25px,7.6cqi,40px);line-height:1.12;letter-spacing:-.01em}
+.v3-stamp-t{font-size:14.5px;font-weight:600;margin-top:6px}
+.v3-stamp-l{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;margin-top:8px}
+.v3-side{margin-top:30px}
+.v3-line{font-family:"Bitter",Cambria,serif;font-weight:600;font-size:22px;line-height:1.35;margin-bottom:20px}
+.v3-btn{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 10px;white-space:nowrap;border:1.5px solid var(--stamp);border-radius:var(--r);color:var(--stamp);text-decoration:none;font-weight:600;font-size:15px;transition:background-color var(--d1),color var(--d1),transform 120ms var(--ei)}
+.v3-btn:hover{background:var(--tint)}
+.v3-btn:active{transform:translateY(1px)}
+.v3-btn--wa{min-height:56px;background:var(--stamp);color:#fff;font-size:17.5px;justify-content:flex-start;padding:0 18px}
+.v3-btn--wa .ic{width:22px;height:22px}
+.v3-btn--wa .ic-end{margin-left:auto;width:18px;height:18px;transition:transform var(--d1) var(--eo)}
+.v3-btn--wa:hover{background:var(--stamp-d)}
+.v3-btn--wa:hover .ic-end{transform:translate(3px,-3px)}
+.v3-more{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:10px}
+.v3-sec{padding-top:80px}
+.v3-h{max-width:62ch;margin-bottom:34px}
+.v3-h h2{font-family:"Bitter",Cambria,serif;font-weight:700;font-size:clamp(28px,8cqi,40px);line-height:1.15;color:var(--ink)}
+.v3-h h2::before{content:"";display:block;width:44px;height:4px;background:var(--stamp);margin-bottom:16px}
+.v3-h p{margin-top:12px;color:var(--ink-2);font-size:18px}
+.v3-fields{display:grid;gap:30px}
+.v3-field{position:relative;border:1.5px solid var(--field);border-radius:var(--r);padding:22px 18px 18px;background:rgba(255,255,255,.5)}
+.v3-field h3{position:absolute;top:0;left:12px;transform:translateY(-55%);padding:0 8px;background:var(--bg);font-family:"Bitter",Cambria,serif;font-weight:700;font-size:18px;line-height:1.3;color:var(--stamp)}
+.v3-field p{color:var(--ink-2)}
+.v3-field p+p{margin-top:6px}
+.v3 .svc-list{color:var(--ink-2)}
+.v3 .svc-list li{position:relative;padding-left:20px}
+.v3 .svc-list li::before{content:"—";position:absolute;left:0;color:var(--stamp)}
+.v3-docs{display:grid;gap:56px}
+.v3-fig{position:relative}
+.v3-shot{display:block;background:var(--paper);border:1.5px solid var(--field);border-radius:var(--r);overflow:hidden;transition:transform var(--d2) var(--eo),border-color var(--d1)}
+.v3-shot img{display:block;width:100%;height:auto}
+.v3-doc:hover .v3-shot{transform:translateY(-3px);border-color:var(--stamp)}
+.v3-concept .v3-shot{border:1.5px dashed #A48A52;padding:8px}
+.v3-seal{position:absolute;right:14px;top:0;z-index:2;display:inline-block;padding:4px 10px;border:2px solid var(--stamp);outline:1px solid var(--stamp);outline-offset:2px;border-radius:4px;font-family:"Bitter",Cambria,serif;font-weight:800;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--stamp);background:var(--bg);transform:translateY(-40%) rotate(-5deg)}
+.v3-seal--live{background:var(--stamp);color:#fff;outline-color:var(--stamp)}
+.v3-doc-b{padding-top:16px}
+.v3-doc h3{font-family:"Bitter",Cambria,serif;font-weight:700;font-size:22px;line-height:1.25}
+.v3-doc p{color:var(--ink-2);font-size:16.5px;margin-top:6px;max-width:60ch}
+.v3-draft{display:inline-block;margin-bottom:8px;padding:3px 10px;border:1.5px dashed var(--bronze);border-radius:3px;font-size:13.5px;font-weight:600;color:var(--ink-2)}
+.v3-link{display:inline-flex;align-items:center;gap:6px;min-height:44px;margin-top:4px;font-weight:600;font-size:15px;color:var(--stamp);text-decoration:none;overflow-wrap:anywhere}
+.v3-link span{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px;text-decoration-color:rgba(31,56,100,.3);transition:text-decoration-color var(--d1)}
+.v3-link:hover span{text-decoration-color:var(--stamp)}
+.v3-link .ic{width:16px;height:16px}
+.v3-foot{margin-top:96px;padding-block:22px 28px;border-top:2px solid var(--stamp);font-size:14px;color:var(--ink-2)}
+
+@container stage (min-width:720px){
+  .v3-head,.v3-hero,.v3-main,.v3-foot{padding-inline:40px}
+  .v3-fields{grid-template-columns:1fr 1fr;gap:36px 28px}
+  .v3-more{grid-template-columns:repeat(4,1fr)}
+  .v3-side{max-width:620px}
+}
+@container stage (min-width:1040px){
+  .v3-hero{display:grid;grid-template-columns:auto 1fr;gap:72px;align-items:center;padding-top:88px;padding-bottom:40px}
+  .v3-stamp-in{padding:22px 34px 24px}
+  .v3-side{margin-top:0;max-width:520px}
+  .v3-line{font-size:28px}
+  .v3-more{grid-template-columns:1fr 1fr}
+  .v3-sec{padding-top:120px}
+  .v3-doc{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:48px;align-items:center}
+  .v3-doc-b{padding-top:0}
+}
+
+@media (prefers-reduced-motion:no-preference){
+  .js .v3.play .v3-stamp{animation:v3-stamp 320ms both 60ms}
+  .js .v3.play .h-in{animation-duration:var(--d2);animation-delay:calc(var(--i,0)*60ms + 200ms)}
+  .js .v3 .rv{transition:opacity var(--d2) var(--eo),transform var(--d2) var(--eo);transition-delay:calc(var(--i,0)*60ms)}
+  .js .v3 .rv:not(.in){transform:translateY(12px)}
+  .js .v3 .rv.in .v3-seal{animation:v3-seal 300ms both 140ms}
+  .js .v3 .rv:not(.in) .v3-seal{opacity:0}
+}
+@keyframes v3-stamp{0%{opacity:0;transform:rotate(-7deg) scale(1.22);animation-timing-function:var(--ei)}62%{opacity:1;transform:rotate(-1.6deg) scale(.975);animation-timing-function:var(--eo)}100%{opacity:1;transform:rotate(-2deg) scale(1)}}
+@keyframes v3-seal{0%{opacity:0;transform:translateY(-40%) rotate(-12deg) scale(1.4);animation-timing-function:var(--ei)}60%{opacity:1;transform:translateY(-40%) rotate(-4.5deg) scale(.96);animation-timing-function:var(--eo)}100%{opacity:1;transform:translateY(-40%) rotate(-5deg) scale(1)}}
+
+/* ===== azaltılmış hareket: her şey görünür, döngü yok ===== */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition-duration:1ms!important;scroll-behavior:auto!important}
+  .rv{opacity:1!important;transform:none!important}
+  .v2-composer{transition:none}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+<symbol id="i-wa" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4.3 20l1.2-4.1a8.2 8.2 0 1 1 3.1 3z"/><path fill="currentColor" d="M9.4 7.9c.2-.4.4-.4.6-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.6 1 1.4 1.8 2.4 2.3.2.1.4.1.5 0l.7-.8c.2-.2.3-.2.6-.1l1.6.8c.2.1.3.2.3.4 0 .5-.2 1.3-1 1.7-.7.3-1.6.3-3-.4-1.9-.9-3.4-2.6-4-4-.5-1.2-.3-2.1.2-2.8z"/></symbol>
+<symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5.5" width="17" height="13" rx="2"/><path d="M4.5 7.5l7.5 5.5 7.5-5.5"/></g></symbol>
+<symbol id="i-card" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="8.5" r="3.4"/><path d="M3.8 19.5c.8-3.2 3.3-4.9 6.2-4.9s5.4 1.7 6.2 4.9"/><path d="M18.5 7.5v6M15.5 10.5h6"/></g></symbol>
+<symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8"><rect x="4" y="4" width="16" height="16" rx="4.6"/><circle cx="12" cy="12" r="3.7"/></g><circle cx="16.8" cy="7.2" r="1.1" fill="currentColor"/></symbol>
+<symbol id="i-in" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="4" y="4" width="16" height="16" rx="2.6"/><path d="M8.6 10.6V16M11.9 16v-5.4M11.9 13.2c0-1.6 1-2.7 2.3-2.7s2.1.9 2.1 2.6V16"/></g><circle cx="8.6" cy="7.9" r="1.1" fill="currentColor"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M9 7h8v8"/></symbol>
+<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M12 21s-6.3-5.5-6.3-10.8a6.3 6.3 0 0 1 12.6 0C18.3 15.5 12 21 12 21z"/><circle cx="12" cy="10.2" r="2.2"/></g></symbol>
+<symbol id="i-send" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" d="M4.5 11.8L19.5 5l-4.6 14.5-3.3-6.1z"/></symbol>
+</svg>
+<a class="pv-skip" href="#pv-panels">Varyanta geç</a>
+<div class="pv-bar">
+  <p class="pv-title"><b>Beynelmilel · dijital kartvizit</b> — 3 tasarım yönü</p>
+  <div class="pv-tabs" role="tablist" aria-label="Varyantlar">
+    <button role="tab" id="tab-v1" aria-controls="v1" aria-selected="true">1 · Yaldız Kart</button>
+    <button role="tab" id="tab-v2" aria-controls="v2" aria-selected="false">2 · Sohbet</button>
+    <button role="tab" id="tab-v3" aria-controls="v3" aria-selected="false">3 · Kaşe</button>
+  </div>
+  <div class="pv-view" role="group" aria-label="Önizleme genişliği">Görünüm
+    <button type="button" data-view="phone" aria-pressed="false">Telefon 412</button>
+    <button type="button" data-view="full" aria-pressed="true">Tam genişlik</button>
+  </div>
+</div>
+<div id="pv-panels">
+<div class="pv-panel" role="tabpanel" id="v1" aria-labelledby="tab-v1">
+  <section class="pv-intro" aria-label="Yaldız Kart — konsept">
+    <div class="pv-txt">
+      <p class="pv-k">Varyant · Yaldız Kart</p>
+      <p class="pv-name" style="font-family:"Instrument Sans";font-weight:600;font-stretch:84%;letter-spacing:-.01em">Yaldız Kart</p>
+      <p>QR'ı okutan kişi, elindeki basılı kartın dijital ikizini görür: kartvizit sayfanın içine gömülü bir blok değil, sayfanın üstünde duran bir nesnedir — arkasında lacivert ikinci kart, kenarında bronz sıcak baskı yaldızı. Masaüstünde kart sol rayda sabit kalır, içerik yanından akar; tam ajans sitesinde bu ray kimlik sütunu olur.</p>
+      <p><strong>Hareket:</strong> Kart masaya bırakılır gibi hafif eğimle yerine oturur, yaldız çizgisinden bir kez ışık geçer; bölümler yavaş ve sakin yükselir (expo-out, 560ms).</p>
+      <p class="pv-note">Önizlemede ilk ekran + “Ne yapıyoruz” + “Yaptığımız işler” gerçek içerikle; kalan bölümler (ne yapar, FlowDesk, ürünler, hakkımda, konuşalım) seçilen dilde ikinci turda.</p>
+    </div>
+    <div class="pv-spec">
+      <ul class="pv-pal"><li><span style="background:#F6F4F1"></span><code>#F6F4F1</code><small>Zemin</small></li><li><span style="background:#FDFCFA"></span><code>#FDFCFA</code><small>Kart yüzeyi</small></li><li><span style="background:#17181A"></span><code>#17181A</code><small>Mürekkep</small></li><li><span style="background:#55565B"></span><code>#55565B</code><small>İkincil metin</small></li><li><span style="background:#1F3864"></span><code>#1F3864</code><small>Lacivert — CTA, arka kart</small></li><li><span style="background:#8A6D2F"></span><code>#8A6D2F</code><small>Bronz — yalnız yaldız çizgisi</small></li><li><span style="background:#DCD7CF"></span><code>#DCD7CF</code><small>Ayraç</small></li></ul>
+      <div class="pv-type">
+        <p class="pv-t1" style="font-family:"Instrument Sans";font-weight:600;font-stretch:84%;letter-spacing:-.01em">Yağız Ertuğrul Kaya</p>
+        <p class="pv-t2" style="font-family:"Instrument Sans"">Kendi ürünlerimizi kuruyoruz. Sizinkini de aynı özenle. — ğ ş ı İ ç ö ü Ğ Ş Ç Ö Ü</p>
+        
+        <p class="pv-t3">Instrument Sans (değişken, genişlik + ağırlık ekseni) — tek aile; ad dar kesimle, gövde normal genişlikte · SIL OFL 1.1</p>
+      </div>
+    </div>
+  </section>
+  <div class="pv-frame">
+<div class="stage v1" id="v1-top">
+  <a class="skip" href="#v1-main">İçeriğe geç</a>
+  <div class="v1-wrap">
+    <header class="v1-rail">
+      <div class="v1-nav">
+        <a class="v1-brand" href="#v1-top"><img src="../kaynak/assets/logo_mark.svg" alt="" width="30" height="26">Beynelmilel</a>
+        <nav class="lang" aria-label="Dil"><a href="#v1-top" aria-current="page" lang="tr">TR</a><span aria-hidden="true">·</span><a class="lang-off" aria-disabled="true" lang="en" title="İngilizce sayfa final aşamada bağlanacak">EN</a></nav>
+      </div>
+      <div class="v1-hold">
+        <div class="v1-card h-in" style="--i:0">
+          <img class="v1-card-mark" src="../kaynak/assets/logo_mark.svg" alt="" width="46" height="40">
+          <div class="v1-card-id">
+            <h1 class="v1-name">Yağız Ertuğrul Kaya</h1>
+            <p class="v1-title">Yazılım Geliştirici &amp; Kurucu · Beynelmilel</p>
+          </div>
+          <span class="v1-foil" aria-hidden="true"></span>
+          <p class="v1-loc"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Bursa, Türkiye</p>
+        </div>
+      </div>
+      <p class="v1-line h-in" style="--i:1">Kendi ürünlerimizi kuruyoruz.<br>Sizinkini de aynı özenle.</p>
+      <div class="v1-actions">
+        <a class="v1-btn v1-btn--wa h-in" style="--i:2" href="https://wa.me/905334765595"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>WhatsApp'tan yaz</span></a>
+        <ul class="v1-more h-in" style="--i:3">
+          <li><a class="v1-btn" href="mailto:yagizkaya43@gmail.com"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>E-posta</span></a></li>
+          <li><a class="v1-btn" href="yagiz-ertugrul-kaya.vcf"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-card"/></svg><span>Rehbere ekle</span></a></li>
+          <li><a class="v1-btn" href="https://www.instagram.com/yagizertugrulkaya/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
+          <li><a class="v1-btn" href="https://www.linkedin.com/in/ya%C4%9F%C4%B1z-ertu%C4%9Frul-kaya-4b47281bb/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-in"/></svg><span>LinkedIn</span></a></li>
+        </ul>
+      </div>
+    </header>
+    <main class="v1-main" id="v1-main" tabindex="-1">
+      <section class="v1-sec" aria-labelledby="v1-h-svc">
+        <div class="v1-head rv">
+          <h2 id="v1-h-svc">Ne yapıyoruz</h2>
+          <p>Her türlü sistem ve profesyonel web sitesi; reklamı da biz yapıyoruz.</p>
+        </div>
+        <ul class="v1-svc">
+          <li class="rv" style="--i:0"><h3>Sistemler &amp; SaaS</h3><p>İşletmenize özel yönetim sistemi: üyeler, randevu, ödeme, personel — tek panelde.</p><p>WhatsApp randevu botu: menü, 24 saat ve 2 saat önce hatırlatma, iptal, yönetim paneli.</p></li>
+          <li class="rv" style="--i:1"><h3>Profesyonel web sitesi</h3><p>Vitrin site: 4-6 sayfa, mobil uyumlu, temel SEO, KVKK ve çerez metinleri.</p><p>Vitrin+: İngilizce/Almanca, ürün kataloğu, teklif formu, Google Business kaydı.</p></li>
+          <li class="rv" style="--i:0"><h3>Reklamcılık</h3><ul class="svc-list"><li>Sosyal medya yönetimi</li><li>Meta ve Google reklamları</li><li>Reklam kreatifi (görsel ve video)</li><li>Google Business ve yerel SEO</li></ul></li>
+          <li class="rv" style="--i:1"><h3>Bakım &amp; denetim</h3><p>Bakım: güncelleme, yedek, izleme.</p><p>Teknik denetim: güvenlik ve KVKK teknik raporu.</p></li>
+        </ul>
+      </section>
+      <section class="v1-sec" aria-labelledby="v1-h-work">
+        <div class="v1-head rv"><h2 id="v1-h-work">Yaptığımız işler</h2></div>
+        <ul class="v1-work">
+          <li class="v1-item rv v1-live" style="--i:0">
+            <a class="v1-shot" href="https://yagizlastik.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/yagizlastik.webp" alt="Yağız Lastik Sanayi — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a>
+            <div class="v1-meta"><h3>Yağız Lastik Sanayi</h3><span class="v1-tag v1-tag--live">Yayında</span></div>
+            <p>Bursa'dan dünyaya üreten bir fabrika için üç dilli (TR/EN/DE) kurumsal site. Framework yok, bağımlılık yok, kırılacak parça yok.</p>
+            <a class="v1-link" href="https://yagizlastik.com" target="_blank" rel="noopener"><span>yagizlastik.com</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="v1-item rv v1-live" style="--i:1">
+            <a class="v1-shot" href="https://viva-pilates-sigma.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/studia.webp" alt="Studia — sitenin ekran görüntüsü" width="1200" height="780" loading="lazy" decoding="async"></a>
+            <div class="v1-meta"><h3>Studia</h3><span class="v1-tag v1-tag--live">Canlı</span></div>
+            <p>Pilates stüdyoları için uçtan uca yönetim: üyeler, ders programı, yoklama, paketler ve taksitli ödemeler tek panelde. İlk stüdyo canlıda ve her gün kullanılıyor.</p>
+            <a class="v1-link" href="https://viva-pilates-sigma.vercel.app" target="_blank" rel="noopener"><span>viva-pilates-sigma.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="v1-item rv v1-soon" style="--i:0">
+            <a class="v1-shot" href="https://ayplastik.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/ayplastik.webp" alt="AY Plastik — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a>
+            <div class="v1-meta"><h3>AY Plastik</h3><span class="v1-tag v1-tag--soon">Yayına hazırlanıyor</span></div>
+            <p>1976'dan beri plastik ambalaj üreten Bursa fabrikası için TR+EN kurumsal site; 32 sayfa, ürün künyeleri.</p>
+            <a class="v1-link" href="https://ayplastik.vercel.app" target="_blank" rel="noopener"><span>ayplastik.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="v1-item rv v1-soon" style="--i:1">
+            <a class="v1-shot" href="https://pilates-ebru-cosar.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/pilatesebrucosar.webp" alt="Pilates Ebru Coşar — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a>
+            <div class="v1-meta"><h3>Pilates Ebru Coşar</h3><span class="v1-tag v1-tag--soon">Yakında</span></div>
+            <p>Nilüfer'deki reformer stüdyosu için tek sayfa tanıtım sitesi.</p>
+            <a class="v1-link" href="https://pilates-ebru-cosar.vercel.app" target="_blank" rel="noopener"><span>pilates-ebru-cosar.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="v1-item rv v1-live" style="--i:0">
+            <a class="v1-shot" href="https://astromarin-app.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/astro.webp" alt="Astro Marin — sitenin ekran görüntüsü" width="1200" height="780" loading="lazy" decoding="async"></a>
+            <div class="v1-meta"><h3>Astro Marin</h3><span class="v1-tag v1-tag--live">Canlı</span></div>
+            <p>Doğum haritasından astrokartografiye, tam kapsamlı astroloji platformu.</p>
+            <a class="v1-link" href="https://astromarin-app.vercel.app" target="_blank" rel="noopener"><span>astromarin-app.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </li>
+          <li class="v1-item rv v1-concept" style="--i:1">
+            <a class="v1-shot" href="https://epot-tasarim-onerileri.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/epot.webp" alt="EPOT Mühendislik — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a>
+            <div class="v1-meta"><h3>EPOT Mühendislik</h3><span class="v1-tag v1-tag--concept">Konsept çalışması</span></div>
+            <p>1980'den beri harmonik filtreli kompanzasyon üreten Bursa firması için altı tasarım konsepti.</p>
+            <a class="v1-link" href="https://epot-tasarim-onerileri.vercel.app" target="_blank" rel="noopener"><span>epot-tasarim-onerileri.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </li>
+        </ul>
+      </section>
+      <footer class="v1-foot">© 2026 Beynelmilel · Bursa</footer>
+    </main>
+  </div>
+</div>
+  </div>
+</div>
+<div class="pv-panel" role="tabpanel" id="v2" aria-labelledby="tab-v2">
+  <section class="pv-intro" aria-label="Sohbet — konsept">
+    <div class="pv-txt">
+      <p class="pv-k">Varyant · Sohbet</p>
+      <p class="pv-name" style="font-family:"Atkinson Hyperlegible Next";font-weight:700;letter-spacing:-.01em">Sohbet</p>
+      <p>Bu kitle sayfayı zaten WhatsApp'ın ya da Instagram'ın içinden açıyor; sayfa onların her gün kullandığı dili konuşur: profil başlığı, mesaj baloncukları, bağlantı önizlemeleri. Son adım — yazmak — sayfanın doğal devamı olur: ana buton kaybolunca alttan bir yazma çubuğu çıkar ve doğrudan WhatsApp'a açılır.</p>
+      <p><strong>Hareket:</strong> Önce üç nokta kısa bir an "yazıyor", ardından baloncuk hafif yaylanarak belirir; kaydırdıkça mesajlar sırayla, küçük bir sekmeyle düşer.</p>
+      <p class="pv-note">Önizlemede ilk ekran + “Ne yapıyoruz” + “Yaptığımız işler” gerçek içerikle; kalan bölümler (ne yapar, FlowDesk, ürünler, hakkımda, konuşalım) seçilen dilde ikinci turda.</p>
+    </div>
+    <div class="pv-spec">
+      <ul class="pv-pal"><li><span style="background:#F7F7F4"></span><code>#F7F7F4</code><small>Zemin</small></li><li><span style="background:#FFFFFF"></span><code>#FFFFFF</code><small>Baloncuk</small></li><li><span style="background:#17181A"></span><code>#17181A</code><small>Mürekkep</small></li><li><span style="background:#4E5057"></span><code>#4E5057</code><small>İkincil metin</small></li><li><span style="background:#1F3864"></span><code>#1F3864</code><small>Lacivert — CTA, yazma çubuğu</small></li><li><span style="background:#0E1F33"></span><code>#0E1F33</code><small>Rozet (logo_badge)</small></li><li><span style="background:#8A6D2F"></span><code>#8A6D2F</code><small>Bronz — bölüm çipinin çizgisi</small></li></ul>
+      <div class="pv-type">
+        <p class="pv-t1" style="font-family:"Atkinson Hyperlegible Next";font-weight:700;letter-spacing:-.01em">Yağız Ertuğrul Kaya</p>
+        <p class="pv-t2" style="font-family:"Atkinson Hyperlegible Next"">Kendi ürünlerimizi kuruyoruz. Sizinkini de aynı özenle. — ğ ş ı İ ç ö ü Ğ Ş Ç Ö Ü</p>
+        <p class="pv-t2" style="font-family:'Atkinson Hyperlegible Mono'">yagizlastik.com · viva-pilates-sigma.vercel.app</p>
+        <p class="pv-t3">Atkinson Hyperlegible Next + Atkinson Hyperlegible Mono (Braille Institute; az gören okur için tasarlandı — 40–60 yaş, telefon ekranı) · SIL OFL 1.1</p>
+      </div>
+    </div>
+  </section>
+  <div class="pv-frame">
+<div class="stage v2" id="v2-top">
+  <a class="skip" href="#v2-main">İçeriğe geç</a>
+  <header class="v2-bar">
+    <div class="v2-bar-in">
+      <a class="v2-brand" href="#v2-top"><img src="../kaynak/assets/logo_mark.svg" alt="" width="28" height="24">Beynelmilel</a>
+      <nav class="lang" aria-label="Dil"><a href="#v2-top" aria-current="page" lang="tr">TR</a><span aria-hidden="true">·</span><a class="lang-off" aria-disabled="true" lang="en" title="İngilizce sayfa final aşamada bağlanacak">EN</a></nav>
+    </div>
+  </header>
+  <div class="v2-col">
+    <section class="v2-profile" aria-labelledby="v2-h1">
+      <img class="v2-avatar h-in" style="--i:0" src="../kaynak/assets/logo_badge.svg" alt="" width="88" height="88">
+      <h1 id="v2-h1" class="h-in" style="--i:0">Yağız Ertuğrul Kaya</h1>
+      <p class="v2-title h-in" style="--i:1">Yazılım Geliştirici &amp; Kurucu · Beynelmilel</p>
+      <p class="v2-loc h-in" style="--i:1"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-pin"/></svg>Bursa, Türkiye</p>
+      <div class="v2-lead">
+        <span class="v2-typing" aria-hidden="true"><i></i><i></i><i></i></span>
+        <p class="v2-bubble v2-bubble--lead">Kendi ürünlerimizi kuruyoruz.<br>Sizinkini de aynı özenle.</p>
+      </div>
+      <a class="v2-cta h-in" style="--i:2" href="https://wa.me/905334765595"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>WhatsApp'tan yaz</span></a>
+      <ul class="v2-quick h-in" style="--i:3">
+        <li><a href="mailto:yagizkaya43@gmail.com"><span class="v2-q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg></span><span class="v2-q-l">E-posta</span></a></li>
+        <li><a href="yagiz-ertugrul-kaya.vcf"><span class="v2-q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-card"/></svg></span><span class="v2-q-l">Rehbere ekle</span></a></li>
+        <li><a href="https://www.instagram.com/yagizertugrulkaya/" target="_blank" rel="noopener"><span class="v2-q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg></span><span class="v2-q-l">Instagram</span></a></li>
+        <li><a href="https://www.linkedin.com/in/ya%C4%9F%C4%B1z-ertu%C4%9Frul-kaya-4b47281bb/" target="_blank" rel="noopener"><span class="v2-q-ic"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-in"/></svg></span><span class="v2-q-l">LinkedIn</span></a></li>
+      </ul>
+    </section>
+    <main id="v2-main" tabindex="-1">
+      <section class="v2-sec" aria-labelledby="v2-h-svc">
+        <h2 class="v2-chip rv" id="v2-h-svc">Ne yapıyoruz</h2>
+        <p class="v2-bubble rv" style="--i:1">Her türlü sistem ve profesyonel web sitesi; reklamı da biz yapıyoruz.</p>
+        <article class="v2-bubble rv" style="--i:2"><h3>Sistemler &amp; SaaS</h3><p>İşletmenize özel yönetim sistemi: üyeler, randevu, ödeme, personel — tek panelde.</p><p>WhatsApp randevu botu: menü, 24 saat ve 2 saat önce hatırlatma, iptal, yönetim paneli.</p></article>
+        <article class="v2-bubble rv" style="--i:3"><h3>Profesyonel web sitesi</h3><p>Vitrin site: 4-6 sayfa, mobil uyumlu, temel SEO, KVKK ve çerez metinleri.</p><p>Vitrin+: İngilizce/Almanca, ürün kataloğu, teklif formu, Google Business kaydı.</p></article>
+        <article class="v2-bubble rv" style="--i:4"><h3>Reklamcılık</h3><ul class="svc-list"><li>Sosyal medya yönetimi</li><li>Meta ve Google reklamları</li><li>Reklam kreatifi (görsel ve video)</li><li>Google Business ve yerel SEO</li></ul></article>
+        <article class="v2-bubble rv" style="--i:5"><h3>Bakım &amp; denetim</h3><p>Bakım: güncelleme, yedek, izleme.</p><p>Teknik denetim: güvenlik ve KVKK teknik raporu.</p></article>
+      </section>
+      <section class="v2-sec" aria-labelledby="v2-h-work">
+        <h2 class="v2-chip rv" id="v2-h-work">Yaptığımız işler</h2>
+        <article class="v2-bubble v2-card v2-live rv">
+          <a href="https://yagizlastik.com" target="_blank" rel="noopener">
+            <span class="v2-shot"><img src="../kaynak/assets/yagizlastik.webp" alt="Yağız Lastik Sanayi — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></span>
+            <span class="v2-card-b">
+              <span class="v2-tag v2-tag--live">Yayında</span>
+              <h3>Yağız Lastik Sanayi</h3>
+              <span class="v2-desc">Bursa'dan dünyaya üreten bir fabrika için üç dilli (TR/EN/DE) kurumsal site. Framework yok, bağımlılık yok, kırılacak parça yok.</span>
+              <span class="v2-dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>yagizlastik.com</span>
+            </span>
+          </a>
+        </article>
+        <article class="v2-bubble v2-card v2-live rv">
+          <a href="https://viva-pilates-sigma.vercel.app" target="_blank" rel="noopener">
+            <span class="v2-shot"><img src="../kaynak/assets/studia.webp" alt="Studia — sitenin ekran görüntüsü" width="1200" height="780" loading="lazy" decoding="async"></span>
+            <span class="v2-card-b">
+              <span class="v2-tag v2-tag--live">Canlı</span>
+              <h3>Studia</h3>
+              <span class="v2-desc">Pilates stüdyoları için uçtan uca yönetim: üyeler, ders programı, yoklama, paketler ve taksitli ödemeler tek panelde. İlk stüdyo canlıda ve her gün kullanılıyor.</span>
+              <span class="v2-dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>viva-pilates-sigma.vercel.app</span>
+            </span>
+          </a>
+        </article>
+        <article class="v2-bubble v2-card v2-soon rv">
+          <a href="https://ayplastik.vercel.app" target="_blank" rel="noopener">
+            <span class="v2-shot"><img src="../kaynak/assets/ayplastik.webp" alt="AY Plastik — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></span>
+            <span class="v2-card-b">
+              <span class="v2-tag v2-tag--soon">Yayına hazırlanıyor</span>
+              <h3>AY Plastik</h3>
+              <span class="v2-desc">1976'dan beri plastik ambalaj üreten Bursa fabrikası için TR+EN kurumsal site; 32 sayfa, ürün künyeleri.</span>
+              <span class="v2-dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>ayplastik.vercel.app</span>
+            </span>
+          </a>
+        </article>
+        <article class="v2-bubble v2-card v2-soon rv">
+          <a href="https://pilates-ebru-cosar.vercel.app" target="_blank" rel="noopener">
+            <span class="v2-shot"><img src="../kaynak/assets/pilatesebrucosar.webp" alt="Pilates Ebru Coşar — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></span>
+            <span class="v2-card-b">
+              <span class="v2-tag v2-tag--soon">Yakında</span>
+              <h3>Pilates Ebru Coşar</h3>
+              <span class="v2-desc">Nilüfer'deki reformer stüdyosu için tek sayfa tanıtım sitesi.</span>
+              <span class="v2-dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>pilates-ebru-cosar.vercel.app</span>
+            </span>
+          </a>
+        </article>
+        <article class="v2-bubble v2-card v2-live rv">
+          <a href="https://astromarin-app.vercel.app" target="_blank" rel="noopener">
+            <span class="v2-shot"><img src="../kaynak/assets/astro.webp" alt="Astro Marin — sitenin ekran görüntüsü" width="1200" height="780" loading="lazy" decoding="async"></span>
+            <span class="v2-card-b">
+              <span class="v2-tag v2-tag--live">Canlı</span>
+              <h3>Astro Marin</h3>
+              <span class="v2-desc">Doğum haritasından astrokartografiye, tam kapsamlı astroloji platformu.</span>
+              <span class="v2-dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>astromarin-app.vercel.app</span>
+            </span>
+          </a>
+        </article>
+        <article class="v2-bubble v2-card v2-concept rv">
+          <a href="https://epot-tasarim-onerileri.vercel.app" target="_blank" rel="noopener">
+            <span class="v2-shot"><img src="../kaynak/assets/epot.webp" alt="EPOT Mühendislik — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></span>
+            <span class="v2-card-b">
+              <span class="v2-tag v2-tag--concept">Konsept çalışması</span>
+              <h3>EPOT Mühendislik</h3>
+              <span class="v2-desc">1980'den beri harmonik filtreli kompanzasyon üreten Bursa firması için altı tasarım konsepti.</span>
+              <span class="v2-dom"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg>epot-tasarim-onerileri.vercel.app</span>
+            </span>
+          </a>
+        </article>
+      </section>
+      <footer class="v2-foot">© 2026 Beynelmilel · Bursa</footer>
+    </main>
+  </div>
+  <div class="v2-composer" aria-hidden="true">
+    <a class="v2-compose" href="https://wa.me/905334765595" tabindex="-1"><span>WhatsApp'tan yaz</span><span class="v2-send"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-send"/></svg></span></a>
+  </div>
+</div>
+  </div>
+</div>
+<div class="pv-panel" role="tabpanel" id="v3" aria-labelledby="tab-v3">
+  <section class="pv-intro" aria-label="Kaşe — konsept">
+    <div class="pv-txt">
+      <p class="pv-k">Varyant · Kaşe</p>
+      <p class="pv-name" style="font-family:"Bitter";font-weight:700;letter-spacing:-.01em">Kaşe</p>
+      <p>Türkiye'de işletme sahibinin güvendiği işaret kaşedir: faturanın, sözleşmenin, irsaliyenin altındaki mühür. Kart lacivert mürekkepli bir firma kaşesi olarak basılır; yayındaki işler "onay kaşesi" alır, konsept çalışmaları kaşesiz, kesik çizgili bir notla ayrılır.</p>
+      <p><strong>Hareket:</strong> Kaşe hızlanarak kâğıda iner, küçük bir sekmeyle oturur; iş kartlarındaki kaşeler görünür oldukları anda aynı tok vuruşla basılır. Sert, kısa, 240–320ms.</p>
+      <p class="pv-note">Önizlemede ilk ekran + “Ne yapıyoruz” + “Yaptığımız işler” gerçek içerikle; kalan bölümler (ne yapar, FlowDesk, ürünler, hakkımda, konuşalım) seçilen dilde ikinci turda.</p>
+    </div>
+    <div class="pv-spec">
+      <ul class="pv-pal"><li><span style="background:#F6F4F1"></span><code>#F6F4F1</code><small>Kâğıt</small></li><li><span style="background:#FFFFFF"></span><code>#FFFFFF</code><small>Evrak yüzeyi</small></li><li><span style="background:#1F3864"></span><code>#1F3864</code><small>Kaşe mürekkebi</small></li><li><span style="background:#17181A"></span><code>#17181A</code><small>Mürekkep</small></li><li><span style="background:#505259"></span><code>#505259</code><small>İkincil metin</small></li><li><span style="background:#8A6D2F"></span><code>#8A6D2F</code><small>Bronz — taslak notu çizgisi</small></li><li><span style="background:#C5CBD6"></span><code>#C5CBD6</code><small>Alan çerçevesi</small></li></ul>
+      <div class="pv-type">
+        <p class="pv-t1" style="font-family:"Bitter";font-weight:700;letter-spacing:-.01em">Yağız Ertuğrul Kaya</p>
+        <p class="pv-t2" style="font-family:"Public Sans"">Kendi ürünlerimizi kuruyoruz. Sizinkini de aynı özenle. — ğ ş ı İ ç ö ü Ğ Ş Ç Ö Ü</p>
+        
+        <p class="pv-t3">Bitter (slab serif — evrak, daktilo, resmî belge) + Public Sans (nötr, kurum formu gövdesi) · ikisi de SIL OFL 1.1</p>
+      </div>
+    </div>
+  </section>
+  <div class="pv-frame">
+<div class="stage v3" id="v3-top">
+  <a class="skip" href="#v3-main">İçeriğe geç</a>
+  <header class="v3-head">
+    <a class="v3-brand" href="#v3-top"><img src="../kaynak/assets/logo_mark.svg" alt="" width="32" height="28">Beynelmilel</a>
+    <nav class="lang" aria-label="Dil"><a href="#v3-top" aria-current="page" lang="tr">TR</a><span aria-hidden="true">·</span><a class="lang-off" aria-disabled="true" lang="en" title="İngilizce sayfa final aşamada bağlanacak">EN</a></nav>
+  </header>
+  <div class="v3-hero">
+    <div class="v3-stamp">
+      <div class="v3-stamp-in">
+        <span class="v3-stamp-org" aria-hidden="true">BEYNELMİLEL</span>
+        <h1>Yağız Ertuğrul Kaya</h1>
+        <p class="v3-stamp-t">Yazılım Geliştirici &amp; Kurucu · Beynelmilel</p>
+        <p class="v3-stamp-l">Bursa, Türkiye</p>
+      </div>
+    </div>
+    <div class="v3-side">
+      <p class="v3-line h-in" style="--i:0">Kendi ürünlerimizi kuruyoruz.<br>Sizinkini de aynı özenle.</p>
+      <a class="v3-btn v3-btn--wa h-in" style="--i:1" href="https://wa.me/905334765595"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-wa"/></svg><span>WhatsApp'tan yaz</span><svg class="ic ic-end" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+      <ul class="v3-more h-in" style="--i:2">
+        <li><a class="v3-btn" href="mailto:yagizkaya43@gmail.com"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-mail"/></svg><span>E-posta</span></a></li>
+        <li><a class="v3-btn" href="yagiz-ertugrul-kaya.vcf"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-card"/></svg><span>Rehbere ekle</span></a></li>
+        <li><a class="v3-btn" href="https://www.instagram.com/yagizertugrulkaya/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-ig"/></svg><span>Instagram</span></a></li>
+        <li><a class="v3-btn" href="https://www.linkedin.com/in/ya%C4%9F%C4%B1z-ertu%C4%9Frul-kaya-4b47281bb/" target="_blank" rel="noopener"><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-in"/></svg><span>LinkedIn</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <main class="v3-main" id="v3-main" tabindex="-1">
+    <section class="v3-sec" aria-labelledby="v3-h-svc">
+      <div class="v3-h rv"><h2 id="v3-h-svc">Ne yapıyoruz</h2><p>Her türlü sistem ve profesyonel web sitesi; reklamı da biz yapıyoruz.</p></div>
+      <div class="v3-fields">
+        <div class="v3-field rv" style="--i:0"><h3>Sistemler &amp; SaaS</h3><p>İşletmenize özel yönetim sistemi: üyeler, randevu, ödeme, personel — tek panelde.</p><p>WhatsApp randevu botu: menü, 24 saat ve 2 saat önce hatırlatma, iptal, yönetim paneli.</p></div>
+        <div class="v3-field rv" style="--i:1"><h3>Profesyonel web sitesi</h3><p>Vitrin site: 4-6 sayfa, mobil uyumlu, temel SEO, KVKK ve çerez metinleri.</p><p>Vitrin+: İngilizce/Almanca, ürün kataloğu, teklif formu, Google Business kaydı.</p></div>
+        <div class="v3-field rv" style="--i:0"><h3>Reklamcılık</h3><ul class="svc-list"><li>Sosyal medya yönetimi</li><li>Meta ve Google reklamları</li><li>Reklam kreatifi (görsel ve video)</li><li>Google Business ve yerel SEO</li></ul></div>
+        <div class="v3-field rv" style="--i:1"><h3>Bakım &amp; denetim</h3><p>Bakım: güncelleme, yedek, izleme.</p><p>Teknik denetim: güvenlik ve KVKK teknik raporu.</p></div>
+      </div>
+    </section>
+    <section class="v3-sec" aria-labelledby="v3-h-work">
+      <div class="v3-h rv"><h2 id="v3-h-work">Yaptığımız işler</h2></div>
+      <ul class="v3-docs">
+        <li class="v3-doc v3-live rv">
+          <div class="v3-fig"><a class="v3-shot" href="https://yagizlastik.com" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/yagizlastik.webp" alt="Yağız Lastik Sanayi — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a><span class="v3-seal v3-seal--live" aria-hidden="true">Yayında</span></div>
+          <div class="v3-doc-b">
+            <span class="sr">Durum: Yayında</span>
+            <h3>Yağız Lastik Sanayi</h3>
+            <p>Bursa'dan dünyaya üreten bir fabrika için üç dilli (TR/EN/DE) kurumsal site. Framework yok, bağımlılık yok, kırılacak parça yok.</p>
+            <a class="v3-link" href="https://yagizlastik.com" target="_blank" rel="noopener"><span>yagizlastik.com</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="v3-doc v3-live rv">
+          <div class="v3-fig"><a class="v3-shot" href="https://viva-pilates-sigma.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/studia.webp" alt="Studia — sitenin ekran görüntüsü" width="1200" height="780" loading="lazy" decoding="async"></a><span class="v3-seal v3-seal--live" aria-hidden="true">Canlı</span></div>
+          <div class="v3-doc-b">
+            <span class="sr">Durum: Canlı</span>
+            <h3>Studia</h3>
+            <p>Pilates stüdyoları için uçtan uca yönetim: üyeler, ders programı, yoklama, paketler ve taksitli ödemeler tek panelde. İlk stüdyo canlıda ve her gün kullanılıyor.</p>
+            <a class="v3-link" href="https://viva-pilates-sigma.vercel.app" target="_blank" rel="noopener"><span>viva-pilates-sigma.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="v3-doc v3-soon rv">
+          <div class="v3-fig"><a class="v3-shot" href="https://ayplastik.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/ayplastik.webp" alt="AY Plastik — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a><span class="v3-seal v3-seal--soon" aria-hidden="true">Yayına hazırlanıyor</span></div>
+          <div class="v3-doc-b">
+            <span class="sr">Durum: Yayına hazırlanıyor</span>
+            <h3>AY Plastik</h3>
+            <p>1976'dan beri plastik ambalaj üreten Bursa fabrikası için TR+EN kurumsal site; 32 sayfa, ürün künyeleri.</p>
+            <a class="v3-link" href="https://ayplastik.vercel.app" target="_blank" rel="noopener"><span>ayplastik.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="v3-doc v3-soon rv">
+          <div class="v3-fig"><a class="v3-shot" href="https://pilates-ebru-cosar.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/pilatesebrucosar.webp" alt="Pilates Ebru Coşar — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a><span class="v3-seal v3-seal--soon" aria-hidden="true">Yakında</span></div>
+          <div class="v3-doc-b">
+            <span class="sr">Durum: Yakında</span>
+            <h3>Pilates Ebru Coşar</h3>
+            <p>Nilüfer'deki reformer stüdyosu için tek sayfa tanıtım sitesi.</p>
+            <a class="v3-link" href="https://pilates-ebru-cosar.vercel.app" target="_blank" rel="noopener"><span>pilates-ebru-cosar.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="v3-doc v3-live rv">
+          <div class="v3-fig"><a class="v3-shot" href="https://astromarin-app.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/astro.webp" alt="Astro Marin — sitenin ekran görüntüsü" width="1200" height="780" loading="lazy" decoding="async"></a><span class="v3-seal v3-seal--live" aria-hidden="true">Canlı</span></div>
+          <div class="v3-doc-b">
+            <span class="sr">Durum: Canlı</span>
+            <h3>Astro Marin</h3>
+            <p>Doğum haritasından astrokartografiye, tam kapsamlı astroloji platformu.</p>
+            <a class="v3-link" href="https://astromarin-app.vercel.app" target="_blank" rel="noopener"><span>astromarin-app.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+        <li class="v3-doc v3-concept rv">
+          <div class="v3-fig"><a class="v3-shot" href="https://epot-tasarim-onerileri.vercel.app" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="../kaynak/assets/epot.webp" alt="EPOT Mühendislik — sitenin ekran görüntüsü" width="1200" height="750" loading="lazy" decoding="async"></a></div>
+          <div class="v3-doc-b">
+            <span class="v3-draft">Konsept çalışması</span>
+            <h3>EPOT Mühendislik</h3>
+            <p>1980'den beri harmonik filtreli kompanzasyon üreten Bursa firması için altı tasarım konsepti.</p>
+            <a class="v3-link" href="https://epot-tasarim-onerileri.vercel.app" target="_blank" rel="noopener"><span>epot-tasarim-onerileri.vercel.app</span><svg class="ic" aria-hidden="true" focusable="false"><use href="#i-arrow"/></svg></a>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="v3-foot">© 2026 Beynelmilel · Bursa</footer>
+</div>
+  </div>
+</div>
+</div>
+<script>
+(function(){
+  var d=document;
+  var tabs=[].slice.call(d.querySelectorAll('.pv-tabs [role=tab]'));
+  var panels=tabs.map(function(t){return d.getElementById(t.getAttribute('aria-controls'))});
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)');
+  function replay(p){var s=p.querySelector('.stage');s.classList.remove('play');void s.offsetWidth;s.classList.add('play')}
+  function show(i,focus){
+    tabs.forEach(function(t,j){var on=j===i;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;panels[j].hidden=!on});
+    replay(panels[i]);
+    if(focus)tabs[i].focus();
+    if(history.replaceState)history.replaceState(null,'','#'+panels[i].id);
+  }
+  tabs.forEach(function(t,i){
+    t.addEventListener('click',function(){show(i,false);window.scrollTo(0,0)});
+    t.addEventListener('keydown',function(e){
+      var n=e.key==='ArrowRight'?i+1:e.key==='ArrowLeft'?i-1:e.key==='Home'?0:e.key==='End'?tabs.length-1:null;
+      if(n===null)return;e.preventDefault();show((n+tabs.length)%tabs.length,true);
+    });
+  });
+  var start=Math.max(0,panels.map(function(p){return '#'+p.id}).indexOf(location.hash));
+  show(start,false);
+
+  /* görünüm: telefon / tam genişlik */
+  var vb=[].slice.call(d.querySelectorAll('.pv-view button'));
+  vb.forEach(function(b){b.addEventListener('click',function(){
+    vb.forEach(function(x){x.setAttribute('aria-pressed',x===b)});
+    d.body.classList.toggle('pv-phone',b.dataset.view==='phone');
+  })});
+
+  /* scroll reveal (.rv -> .in) */
+  var rv=d.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.08});
+    rv.forEach(function(el){io.observe(el)});
+  } else rv.forEach(function(el){el.classList.add('in')});
+
+  /* V2: ana buton ekrandan çıkınca yazma çubuğu gelir */
+  var cta=d.querySelector('.v2-cta'),comp=d.querySelector('.v2-composer');
+  if(cta&&comp&&'IntersectionObserver' in window){
+    new IntersectionObserver(function(es){
+      var e=es[0],on=!e.isIntersecting&&e.boundingClientRect.top<0;
+      comp.classList.toggle('on',on);comp.setAttribute('aria-hidden',!on);
+      comp.querySelector('a').tabIndex=on?0:-1;
+    }).observe(cta);
+  }
+
+  /* V1: masaüstünde kart imlece hafifçe eğilir */
+  var hold=d.querySelector('.v1-hold');
+  if(hold&&window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+    var raf=0;
+    hold.addEventListener('pointermove',function(e){
+      if(reduce.matches)return;
+      var r=hold.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      cancelAnimationFrame(raf);
+      raf=requestAnimationFrame(function(){hold.style.transform='perspective(900px) rotateX('+(-y*5).toFixed(2)+'deg) rotateY('+(x*6).toFixed(2)+'deg)'});
+    });
+    hold.addEventListener('pointerleave',function(){cancelAnimationFrame(raf);hold.style.transform=''});
+  }
+})();</script>
+</body>
+</html>
