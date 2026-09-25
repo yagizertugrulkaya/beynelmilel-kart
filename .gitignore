@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 Thumbs.db
 .DS_Store
+tasarim/qa-*.png
+tasarim/_kontak-sayfa.jpg
+tasarim/lighthouse-*.json
