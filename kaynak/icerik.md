@@ -69,6 +69,16 @@ Bölüm alt cümlesi — TR: "Her türlü sistem ve profesyonel web sitesi; rekl
 
 ---
 
+## 4a. Sanayi AI vitrini (kullanıcı 2026-09-26: "görseliyle beraber yukarı" → FlowDesk'in ÜSTÜNDE, hizmetlerden hemen sonra)
+
+| Alan | TR | EN | Kaynak |
+|---|---|---|---|
+| Slogan | Türk sanayicisinin yapay zekâ masası. | The Turkish manufacturer's AI desk. | seed:208-209 |
+| Özet | Üretim, tedarik ve satış sorularını sanayi diliyle cevaplayan yapay zekâ platformu. Kredili kullanım modeli, yönetim paneli ve kurumsal karanlık arayüzüyle sanayiciye göre tasarlandı. | An AI platform that answers manufacturing, supply and sales questions in the language of industry. Designed for manufacturers with a credit-based usage model, an admin panel and a corporate dark interface. | seed summary |
+| Nasıl | Genel amaçlı sohbet botları sanayicinin sorusuna genel amaçlı cevaplar verir. Sanayi AI, soruyu fabrikanın diliyle anlayan bir masa arkadaşı olarak kuruldu. | General-purpose chatbots give the manufacturer general-purpose answers. Sanayi AI was built as a desk mate that understands the question in the factory's own language. | seed body |
+| Link | `https://sanayiaiapp.com` | same | |
+| Görsel | `assets/sanayiai.webp` (1200×750, sanayiaiapp.com ekran görüntüsü, kırpma yok) | | |
+
 ## 4. FlowDesk vitrini
 
 | Alan | TR | EN | Kaynak |
