@@ -41,8 +41,8 @@ if os.path.exists(_qr):
         '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="QR">\n'
         '<link rel="apple-touch-icon" href="../apple-touch-icon.png">\n<link rel="icon" href="../favicon.ico">\n'
         '<style>html,body{margin:0;height:100%;background:#F6F4F1}body{display:flex;align-items:center;justify-content:center}'
-        'img{width:min(100vw,75vh);height:auto;display:block}</style>\n</head>\n<body>\n'
-        '<a href="../"><img src="../qr.png" alt="beynelmilel.org QR kodu — Yağız Ertuğrul Kaya, Beynelmilel" width="1200" height="1500"></a>\n</body>\n</html>\n')
+        'img{width:min(100vw,75vh);height:auto;display:block}h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}</style>\n</head>\n<body>\n'
+        '<h1>Beynelmilel QR</h1>\n<a href="../"><img src="../qr.png" alt="beynelmilel.org QR kodu — Yağız Ertuğrul Kaya, Beynelmilel" width="1200" height="1500"></a>\n</body>\n</html>\n')
 
 # ---- favicon seti (logo_mark_300.png: lacivert işaret, şeffaf, 300x264 -> kare kanvas)
 mark = Image.open(os.path.join(SRC, "assets", "logo_mark_300.png")).convert("RGBA")
