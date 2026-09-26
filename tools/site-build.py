@@ -78,7 +78,7 @@ d.text((430, 205), "Yağız Ertuğrul Kaya", font=font(74, True), fill=NAVY)
 d.text((432, 300), "Yazılım Geliştirici & Kurucu · Beynelmilel", font=font(36), fill=INK)
 d.text((432, 360), "Sistemler · Web siteleri · Reklam", font=font(30), fill=(90, 90, 90))
 d.rectangle([432, 430, 1110, 434], fill=NAVY)
-d.text((432, 452), DOMAIN or "Bursa, Türkiye", font=font(30), fill=NAVY)
+d.text((432, 452), DOMAIN or "İstanbul, Türkiye", font=font(30), fill=NAVY)
 og.save(os.path.join(OUT, "og.png"), optimize=True)
 
 # ---- html

@@ -15,7 +15,7 @@ Kural: her cümlenin kaynağı köşeli parantezde. Kaynak kısaltmaları:
 |---|---|---|---|
 | Ad | Yağız Ertuğrul Kaya | Yağız Ertuğrul Kaya | IP Devir Beyanı:13 |
 | Unvan | Yazılım Geliştirici & Kurucu · Beynelmilel | Software Developer & Founder · Beynelmilel | kullanıcı |
-| Konum | Bursa, Türkiye | Bursa, Türkiye | plan90:35 |
+| Konum | İstanbul, Türkiye | Istanbul, Türkiye | kullanıcı 2026-09-26 (Bursa→İstanbul) |
 | Tek cümle | İşletmeniz için sistem, web sitesi ve reklam — kendi ürünlerimizi kurduğumuz özenle. | Systems, websites and advertising for your business — built with the care we give our own products. | kullanıcı seçimi "A", 2026-09-25 (önceki "Ara sıra sizinkini de" müşteriyi arka plana atıyordu) |
 
 Butonlar (sıra önemli — WhatsApp birincil):
@@ -35,8 +35,8 @@ Dil anahtarı: `TR · EN` (aktif olan `aria-current="page"`). TR sayfada EN link
 ## 2. Beynelmilel ne yapar
 
 **TR**
-Beynelmilel, Bursa'dan çalışan bir yazılım stüdyosu ve ajans. [seed:556 "Türkiye'den çalışan" → Bursa: plan90:35]
-Sattığımız her şeyi önce kendimiz için kurduk: pilates stüdyoları için yönetim sistemi kurarken çok kiracılı mimariyi, Erasmus öğrencileri için sosyal ağ kurarken moderasyon ve veri güvenliğini, yapay zekâ ürünleri kurarken maliyet-performans dengesini kendi paramızla öğrendik. [seed:556-558]
+Beynelmilel, İstanbul'dan çalışan bir yazılım stüdyosu ve ajans. [seed:556 "Türkiye'den çalışan" → Bursa: plan90:35]
+Sattığımız her şeyi önce kendimiz için kurduk: pilates stüdyoları için yönetim sistemi kurarken çok kiracılı mimariyi, Erasmus öğrencileri için sosyal ağ kurarken moderasyon ve veri güvenliğini, yapay zekâ ürünleri kurarken maliyet-performans dengesini kendi ürünlerimizde öğrendik. [seed:556-558]
 Müşteri işine bu birikimle geliriz. [seed:558]
 
 Üç ilke (kısa başlık + tek cümle):
@@ -45,8 +45,8 @@ Müşteri işine bu birikimle geliriz. [seed:558]
 - **Canlıya kadar.** Tasarım dosyası değil, yayında çalışan ürün teslim ederiz. [seed:564]
 
 **EN**
-Beynelmilel is a software studio and agency working from Bursa, Türkiye. [seed:571]
-Everything we sell, we first built for ourselves: we learned multi-tenant architecture building a management system for Pilates studios, moderation and data safety building a social network for Erasmus students, and cost-performance trade-offs building AI products — all with our own money. [seed:573]
+Beynelmilel is a software studio and agency working from Istanbul, Türkiye. [seed:571]
+Everything we sell, we first built for ourselves: we learned multi-tenant architecture building a management system for Pilates studios, moderation and data safety building a social network for Erasmus students, and cost-performance trade-offs building AI products — all in our own products. [seed:573]
 We arrive at client work carrying that experience. [seed:573]
 
 - **Full responsibility for every project.** What we say yes to, we own end-to-end — from design to launch. [seed:577 uyarlaması]
@@ -103,7 +103,7 @@ Bölüm başlığı — TR: "Yaptığımız işler" · EN: "Work we delivered"
 ## 6. Kendi ürünlerimiz
 
 Bölüm başlığı — TR: "Kendi ürünlerimiz" · EN: "Our own products"
-Alt cümle — TR: "Kendi paramızla, kendi adımızla canlıya taşıdıklarımız." [seed:541] · EN: "Taken live with our own money and our own name on them." [seed:544]
+Alt cümle — TR: "Kendi adımızla canlıya taşıdıklarımız." [seed:541] · EN: "Taken live under our own name." [seed:544]
 
 | Ürün | TR | EN | Link | Kaynak |
 |---|---|---|---|---|
@@ -134,13 +134,13 @@ Alt cümle — TR: "Henüz yayında olmayan, masamızda büyüyen işler." [kull
 ## 7. Hakkımda
 
 **TR**
-Yağız Ertuğrul Kaya. Bursa'da yaşıyorum; Beynelmilel'i tek başıma kurdum ve yürütüyorum. [dataroom/00-Genel-Bakis-TR.md:12 "1 kurucu"; plan90:35]
-Sattığım her şeyi önce kendim için kurdum; bir işi tasarımdan altyapıya, yayından güvenliğe kadar uçtan uca üstlenirim. [seed:543,556]
+Yağız Ertuğrul Kaya. İstanbul'da yaşıyorum; Beynelmilel'i ekibimle yürütüyoruz. [dataroom/00-Genel-Bakis-TR.md:12 "1 kurucu"; plan90:35]
+Sattığımız her şeyi önce kendimiz için kurduk; bir işi tasarımdan altyapıya, yayından güvenliğe kadar uçtan uca üstleniriz. [seed:543,556]
 Yeni bir iş için en hızlı yol WhatsApp. [kullanıcı — birincil CTA]
 
 **EN**
-Yağız Ertuğrul Kaya. I live in Bursa, Türkiye; I founded Beynelmilel and run it on my own. [dataroom:12; plan90:35]
-Everything I sell, I first built for myself; I take a project end-to-end, from design to infrastructure, from launch to security. [seed:546,571]
+Yağız Ertuğrul Kaya. I live in Istanbul, Türkiye; I run Beynelmilel together with my team. [dataroom:12; plan90:35]
+Everything we sell, we first built for ourselves; we take a project end-to-end, from design to infrastructure, from launch to security. [seed:546,571]
 For a new project, WhatsApp is the fastest way to reach me. [kullanıcı]
 
 Görsel: portre YOK (şimdilik) → `assets/logo_badge.svg` rozet. [kullanıcı]
@@ -155,13 +155,13 @@ Görsel: portre YOK (şimdilik) → `assets/logo_badge.svg` rozet. [kullanıcı]
 | E-posta | yagizkaya43@gmail.com |
 | Instagram | @yagizertugrulkaya → `https://www.instagram.com/yagizertugrulkaya/` |
 | LinkedIn | `https://www.linkedin.com/in/ya%C4%9F%C4%B1z-ertu%C4%9Frul-kaya-4b47281bb/` |
-| Konum | Bursa, Türkiye |
+| Konum | İstanbul, Türkiye |
 | Web | beynelmilel.org |
 
 Bölüm başlığı — TR: "Konuşalım" · EN: "Let's talk"
-Bölüm cümlesi — TR: "Bir fikriniz, bir siparişiniz ya da sadece bir sorunuz varsa yazın; aynı gün dönerim." [kullanıcı onayı bekliyor] · EN: "An idea, an order or just a question — write, and I'll reply the same day."
+Bölüm cümlesi — TR: "Bir fikriniz, bir siparişiniz ya da sadece bir sorunuz varsa yazın; aynı gün döneriz." [kullanıcı onayı bekliyor] · EN: "An idea, an order or just a question — write, and we'll reply the same day."
 
-Footer — TR: "© 2026 Beynelmilel · Bursa" · EN: "© 2026 Beynelmilel · Bursa, Türkiye"
+Footer — TR: "© 2026 Beynelmilel · İstanbul" · EN: "© 2026 Beynelmilel · İstanbul, Türkiye"
 
 ---
 
@@ -170,5 +170,5 @@ Footer — TR: "© 2026 Beynelmilel · Bursa" · EN: "© 2026 Beynelmilel · Bur
 | | TR | EN |
 |---|---|---|
 | `<title>` | Yağız Ertuğrul Kaya · Beynelmilel — Yazılım, web sitesi ve reklam | Yağız Ertuğrul Kaya · Beynelmilel — Software, websites and advertising |
-| description | Bursa'dan çalışan yazılım stüdyosu ve ajans. İşletmenize özel sistemler, profesyonel web siteleri ve reklam yönetimi. FlowDesk, Yağız Lastik, Studia ve diğer işler. | A software studio and agency working from Bursa, Türkiye. Custom systems, professional websites and advertising. FlowDesk, Yağız Lastik, Studia and more. |
+| description | İstanbul'dan çalışan yazılım stüdyosu ve ajans. İşletmenize özel sistemler, profesyonel web siteleri ve reklam yönetimi. FlowDesk, Yağız Lastik, Studia ve diğer işler. | A software studio and agency working from Istanbul, Türkiye. Custom systems, professional websites and advertising. FlowDesk, Yağız Lastik, Studia and more. |
 | lang | tr | en |
