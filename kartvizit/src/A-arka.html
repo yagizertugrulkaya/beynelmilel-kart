@@ -1,0 +1,12 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>A Monogram Kabartma — arka</title>
+<link rel="stylesheet" href="kart.css"><script src="mod.js"></script><style>
+@page{size:91mm 61mm;margin:0}
+body{--kagit:#F8F7F3;--kagit-baski:#FFFFFF;font-family:"EB Garamond",serif;text-align:center}
+/* QR sessiz alanı (beyaz) kağıt tonuna karışsın diye yalnız ekranda multiply */
+@media screen{.qr{mix-blend-mode:multiply}}
+.qr{left:0;right:0;margin:0 auto;bottom:10.2mm}
+.alan{left:var(--safe);right:var(--safe);bottom:calc(var(--safe) + .4mm);font-size:6.5pt;line-height:1;letter-spacing:.22em;padding-left:.22em;color:var(--navy)}
+</style></head><body>
+<img class="abs qr murekkep" src="../../qr/beynelmilel-org.svg" alt="beynelmilel.org QR kodu">
+<p class="abs alan caps murekkep" lang="en">beynelmilel.org</p>
+</body></html>

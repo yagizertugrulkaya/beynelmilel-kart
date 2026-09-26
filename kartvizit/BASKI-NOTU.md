@@ -1,64 +1,72 @@
-# Beynelmilel kartvizit — matbaa notu
+# Beynelmilel kartvizit — matbaa notu (tur 2)
 
 Hazırlayan: Yağız Ertuğrul Kaya · +90 533 476 55 95 · yagizkaya43@gmail.com
 Tarih: 26.09.2026
 
-## 1. Ölçü
+## 1. Ölçü ve dosya düzeni
 
-| | Net (kesim) | Taşmalı dosya | Güvenli alan |
+| Varyant | Net (kesim) | Taşmalı dosya | Güvenli alan |
 |---|---|---|---|
-| V1, V3, V4 (yatay) | 85 × 55 mm | 91 × 61 mm | kesimden içeri 4 mm |
-| V2 (dikey) | 55 × 85 mm | 61 × 91 mm | kesimden içeri 4 mm |
+| A · Monogram Kabartma | 85 × 55 mm yatay | 91 × 61 mm | kesimden 4 mm |
+| B · Bronz Çizgi | 85 × 55 mm yatay | 91 × 61 mm | kesimden 4 mm |
+| C · Yalnız İsim | 55 × 85 mm **dikey** | 61 × 91 mm | kesimden 4 mm |
 
-- Dosyalarda her kenarda **3 mm taşma** var ve dolu. Kesim işareti ya da renk barı **yok**; lütfen kendi montajınızda ekleyin.
-- Tüm metinler kesimden en az 4 mm içeride.
-- PDF sayfa boyutu Chrome'un nokta yuvarlaması yüzünden 91,02 × 61,04 mm (V2'de 61,04 × 91,02 mm). Fark 0,05 mm'nin altında; merkezden hizalayın.
-- Fontlar PDF'e gömülü. Metin ve logo vektör, QR vektör. Dosyalarda raster görsel yok.
-- Dosyalar **RGB** olarak hazırlandı. CMYK/spot dönüşümünü aşağıdaki değerlerle yapın ve **ıslak prova ya da renk provası** gönderin.
+- 3 mm taşma her kenarda dolu. Dosyalarda kesim işareti yok; montajda ekleyin.
+- PDF sayfa boyutu Chrome'un nokta yuvarlaması nedeniyle 91,02 × 61,04 mm (C'de 61,04 × 91,02 mm). Fark 0,05 mm'nin altında; merkezden hizalayın.
+- Metin, logo ve QR vektör; fontlar gömülü (Type0). Dosyalarda raster görsel yok. Renkler RGB; aşağıdaki karşılıklarla dönüştürüp prova gönderin.
+- **Kompozit PDF** (`X-on.pdf`, `X-arka.pdf`) yüzün bitmiş görünümüdür. **Katman PDF'leri** her özel işlem için ayrı kalıp/film dosyasıdır: yalnız o öğe %100 siyah, gerisi boş, konum kompozitle birebir aynıdır.
+- Koyu kağıtlı yüzlerde (B arka, C ön ve arka) kompozitteki lacivert zemin **kağıdın kendi rengidir, basılmaz.**
+- A ön yüzündeki kör kabartma kompozitte görünmez (mürekkepsiz). Konumu `A-on-kabartma.pdf` içindedir.
 
 ## 2. Renkler
 
-| Rol | RGB hex | Yaklaşık CMYK | Spot önerisi |
+| Rol | RGB hex | Yaklaşık CMYK | Spot / malzeme |
 |---|---|---|---|
-| Lacivert (çıpa) | #1F3864 | C100 M82 Y31 K20 | Pantone 534 C |
-| Bronz (yalnız folyo) | #8A6D2F | C30 M45 Y95 K30 (düz baskı gerekirse) | Sıcak folyo: bronz / antik altın, mat ya da yarı mat (parlak altın değil). Renk kartından seçim yapılacak. |
-| Mürekkep (metin, QR) | #17181A | **Yalnız K100** | — |
-| İkincil gri (V1) | #565B63 | K75 (tek kanal) | — |
-| Kırık beyaz metin (V2) | #F3F2EE | Boşaltma (kağıt beyazı) ya da opak beyaz | — |
-| İkincil açık metin (V2) | #BCC4D3 | Boşaltma + C20 M10 ton ya da kağıt beyazı | Sade üretim için beyazla birleştirilebilir |
-
-- **QR ve küçük siyah metin 4 renkli zengin siyah OLMASIN**; tek kanal K100 basılsın (register kayması QR'ı okunmaz yapar).
-- V3 ve V4'teki kırık beyaz tonlar **kağıdın kendi rengidir**, baskı değildir. PDF'te zemin beyaz (mürekkepsiz) bırakıldı.
+| Lacivert | #1F3864 | C100 M82 Y31 K20 | Pantone 534 C; koyu kağıtta kağıt rengi |
+| Bronz | #8A6D2F | (yalnız referans) | **Sıcak folyo**: mat ya da yarı mat bronz/antik altın, parlak sarı altın değil. Öneri: Kurz Luxor serisinden bakır-bronz tonu (ör. Luxor 358). Numara matbaanın folyo kartından teyit edilsin. |
+| Mürekkep (QR) | #17181A | **Yalnız K100** | Zengin siyah kullanmayın (register kayması QR'ı bozar) |
+| Metin grisi | #4A4F58 (A), #4F5561 (B) | K75 civarı ya da lacivertin %80 tramı | Letterpress'te tek renk lacivert ile basılabilir |
+| Opak beyaz | #FFFFFF | — | Serigrafi opak beyaz (2 kat) ya da beyaz pigment folyo |
 
 ## 3. Varyant bazında üretim
 
-| Varyant | Kağıt | Baskı | Özel işlem |
-|---|---|---|---|
-| **V1 Künye** (yatay, açık) | 400 g mat kuşe veya 450 g Munken Pure | Ofset 2+2 (lacivert + K) | **Kenar boyama** lacivert (Pantone 534 C). Laminasyon yok. |
-| **V2 Gece Mührü** (dikey, koyu) | A) Lacivert boyalı karton (ör. Colorplan Navy, 540 g) veya B) 400 g kuşe + tam lacivert ofset + mat selefon | A) opak beyaz serigrafi, B) boşaltma beyaz | **Yalnız B işareti bronz sıcak folyo.** QR paneli kağıt beyazı ya da çift kat opak beyaz; panelin üstüne başka baskı yok. |
-| **V3 Tek Eksen** (yatay, açık) | 600 g %100 pamuklu (Crane Lettra, Gmund Cotton) | **Letterpress 1+1**: ön yüz lacivert, arka yüz siyah | Laminasyon yok. QR için önce deneme baskısı; dolma olursa arka yüz ofset/dijital. |
-| **V4 Yalnız İsim** (yatay, açık) | 700–800 g çift katlı (duplex) beyaz pamuklu | Ön: **bronz sıcak folyo** (yalnız isim). Arka: QR ofset/dijital K100 | QR asla folyo ile basılmaz. İnce serif harfler için hassas folyo klişesi. |
+### A · Monogram Kabartma
+- **Kağıt:** 600–700 g %100 pamuklu beyaz (Crane Lettra Pearl White, Gmund Cotton Max White).
+- **Ön:** B monogramı **kör kabartma** (erkek-dişi kalıp, orta derinlik, yuvarlatılmış kenar). Kalıp: `A-on-kabartma.pdf`. İsim ve unvan letterpress tek renk lacivert.
+- **Arka:** QR K100 ve alan adı lacivert. QR bölgesine kabartmanın arka izi düşmemeli; kabartma sayfa y 14–27 mm, QR sembolü y 30,3 mm altında; kabartmanın arka izi QR sessiz alanına bile girmez (en az 0,8 mm pay).
 
-Folyo ve letterpress için ayrı spot/kalıp dosyası gerekirse (yalnız folyo katmanı, yalnız mürekkep katmanı) talep üzerine ayrıca verilir; ekteki PDF'ler kompozit görünümdür.
+### B · Bronz Çizgi
+- **Kağıt:** Duplex. 350 g kırık beyaz (Mohawk Superfine Eggshell ya da muadili) + 350 g lacivert (Colorplan Navy), toplam ~700 g. **Kenar boyama lacivert.**
+- **Ön (kırık beyaz yüz):** İsim, unvan ve iletişim lacivert/gri (ofset ya da letterpress). 22 × 0,2 mm çizgi **bronz sıcak folyo**, kalıp: `B-on-folyo.pdf`.
+- **Arka (lacivert yüz):** 27 × 27 mm pencere opak beyaz (`B-arka-beyaz.pdf`), üstüne QR K100 (`B-arka-murekkep.pdf`), altında alan adı bronz folyo (`B-arka-folyo.pdf`).
+- 0,2 mm folyo çizgi, sıcak folyonun alt sınırına yakın. Matbaa 0,25 mm isterse çizgi kalınlaştırılır.
 
-## 4. QR kodu (tüm varyantlarda)
+### C · Yalnız İsim
+- **Kağıt:** Lacivert boyalı pamuklu, 600–700 g (Colorplan Navy duplex ya da Gmund Cotton Navy). Dikey kesim.
+- **Ön:** Yalnız isim, **bronz sıcak folyo + aynı konumda tescilli kabartma** (folyo-kabartma kombine kalıp). Folyo: `C-on-folyo.pdf`, kabartma: `C-on-kabartma.pdf` (aynı şekil). Başka öğe yok.
+- **Arka:** Yalnız QR. 28 × 28 mm panel opak beyaz (`C-arka-beyaz.pdf`), üstüne QR K100 (`C-arka-murekkep.pdf`). Panel bilerek alt yarıda: ön yüzdeki kabartmalı isim sayfa y 26–44,5 mm aralığında, panel 49 mm'den başlıyor. Kabartmanın arka izi QR'a düşmez.
+- Koyu kağıt üstüne beyaz + siyah üst üste register ister. Güvenli alternatif: duplex yapıp arka yüzü beyaz pamuklu kağıttan almak (panel kalkar, QR doğrudan beyaza basılır). Bu yol seçilirse haber verin, dosya güncellenir.
 
-- İçerik: `http://beynelmilel.org/` · hata düzeltme seviyesi **H** · 29 × 29 modül.
-- Baskıdaki boyut: **sembol 18,0 mm**, çevresinde 4 modül (2,5 mm) beyaz sessiz alan; toplam 23 mm. **Küçültmeyin.**
-- Sessiz alanın içine hiçbir baskı, folyo, lak ya da renk girmesin. Koyu zeminde (V2) QR beyaz panel içinde: panel 29 × 29 mm.
-- QR'ın üstüne spot UV, folyo, kabartma ya da gofre **uygulanmasın**; kabartma kart arkasında QR bölgesine denk gelmesin.
-- Her arka yüz PNG'si dijital olarak okutuldu ve `http://beynelmilel.org/` döndü. Provada telefonla tekrar okutun.
+## 4. QR kodu (üç varyantta da)
+
+- İçerik: `http://beynelmilel.org/`, hata düzeltme **H**, 29 × 29 modül.
+- Sembol **18,0 mm**, çevresinde 4 modül (2,5 mm) beyaz sessiz alan; toplam 23 mm. **Küçültmeyin.**
+- Sessiz alana baskı, folyo, lak, kabartma girmez. Koyu kağıtta QR mutlaka beyaz panel içinde durur (B: 27 mm, C: 28 mm).
+- QR'a folyo, spot UV ya da kabartma uygulanmaz; QR letterpress ile basılacaksa önce deneme baskısı alın (mürekkep yayılması).
+- Her arka yüz dijital olarak okutuldu ve `http://beynelmilel.org/` döndü. Provayı telefonla tekrar okutun.
 
 ## 5. Dosya listesi
 
-| Dosya | Açıklama |
+| Dosya | İçerik |
 |---|---|
-| `v1-on.pdf`, `v1-arka.pdf` | V1 Künye, 91 × 61 mm, taşmalı |
-| `v2-on.pdf`, `v2-arka.pdf` | V2 Gece Mührü, 61 × 91 mm (dikey), taşmalı |
-| `v3-on.pdf`, `v3-arka.pdf` | V3 Tek Eksen, 91 × 61 mm, taşmalı |
-| `v4-on.pdf`, `v4-arka.pdf` | V4 Yalnız İsim, 91 × 61 mm, taşmalı |
-| `v*-on.png`, `v*-arka.png` | Her yüzün 300 dpi önizlemesi (yalnızca kontrol içindir, baskıya girmez) |
-| `_hepsi.png` | Tüm varyantların kesilmiş hâli, tek sayfada |
-| `onizleme.html` | Taşma, kesim ve güvenli alan kılavuzlu ekran önizlemesi |
+| `A-on.pdf`, `A-arka.pdf` | A kompozit (91 × 61 mm) |
+| `A-on-kabartma.pdf` | A ön, kör kabartma kalıbı |
+| `B-on.pdf`, `B-arka.pdf` | B kompozit (91 × 61 mm) |
+| `B-on-folyo.pdf` | B ön, bronz folyo çizgi |
+| `B-arka-folyo.pdf`, `B-arka-beyaz.pdf`, `B-arka-murekkep.pdf` | B arka: folyo alan adı / opak beyaz pencere / QR K100 |
+| `C-on.pdf`, `C-arka.pdf` | C kompozit (61 × 91 mm, dikey) |
+| `C-on-folyo.pdf`, `C-on-kabartma.pdf` | C ön: folyo ve kabartma (aynı şekil, tescilli) |
+| `C-arka-beyaz.pdf`, `C-arka-murekkep.pdf` | C arka: opak beyaz panel / QR K100 |
+| `*.png`, `mockup-*.png`, `_hepsi.png` | Yalnız görsel önizleme, **baskıya girmez** |
 
-Baskı için yalnız **PDF** dosyalarını kullanın.
+Baskı için yalnız PDF dosyalarını kullanın.

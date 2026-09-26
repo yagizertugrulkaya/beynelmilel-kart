@@ -1,0 +1,53 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><title>Beynelmilel kartvizit — mockup</title>
+<!-- Ürün fotoğrafı simülasyonu: kartlar ?mod=mockup ile yüklenir (folyo metali, kabartma ışığı, kağıt greni).
+     Gölge/gradyan yalnız bu sahnede; baskı PDF'leri düzdür. Kullanım: mockup.html?v=A|B|C -->
+<style>
+html,body{margin:0;height:100%}
+body{width:1000px;height:640px;overflow:hidden;position:relative;background:#3a3935;
+  perspective:2600px;perspective-origin:50% 8%}
+/* Keten: iki yönlü lif gürültüsü + ışık havuzu + vinyet */
+.keten,.isik{position:absolute;inset:0;pointer-events:none}
+.keten{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='a'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .75' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .98 0 0 0 0 .94 0 0 0 .15 -.03'/%3E%3C/filter%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75 .012' numOctaves='2' seed='8' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .22 -.05'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23a)'/%3E%3Crect width='400' height='400' filter='url(%23b)'/%3E%3C/svg%3E");background-size:200px}
+.isik{z-index:50;background:
+  radial-gradient(ellipse 70% 60% at 30% 22%,rgba(255,244,225,.13),rgba(255,244,225,0) 70%),
+  radial-gradient(ellipse 120% 100% at 50% 40%,rgba(0,0,0,0) 55%,rgba(0,0,0,.42) 100%)}
+.kart{position:absolute;transform-style:preserve-3d;transform-origin:50% 50%;
+  transform:translate(var(--x),var(--y)) rotateX(30deg) rotateZ(var(--rz)) scale(var(--s,1.25))}
+.yuz,.golge,.kat{position:absolute;inset:0}
+.golge{transform:translateZ(0);box-shadow:
+  0 0 .6px rgba(0,0,0,.55),1px 2px 3px rgba(0,0,0,.38),6px 12px 18px rgba(0,0,0,.28),18px 34px 50px rgba(0,0,0,.24)}
+.kat{background:var(--kenar)}
+.yuz{overflow:hidden;transform:translateZ(var(--t))}
+.yuz iframe{display:block;border:0;margin:-3mm 0 0 -3mm;width:91mm;height:61mm}
+.dikey .yuz iframe{width:61mm;height:91mm}
+</style></head><body>
+<div class="keten"></div>
+<div id="sahne"></div>
+<div class="isik"></div>
+<script>
+const sahneler = {
+  // x,y: sol üst (px) · rz: masa düzleminde dönüş · kenar: kağıt gövdesi · t: kalınlık (px)
+  A: [ { f:'A-arka', x:110, y:115, rz:'-7deg', kenar:'#E6E3DA', t:3.2 },
+       { f:'A-on',   x:525, y:290, rz:'4deg',  kenar:'#E6E3DA', t:3.2 } ],
+  B: [ { f:'B-arka', x:110, y:115, rz:'-7deg', kenar:'#1B3159', t:3.6 },
+       { f:'B-on',   x:525, y:290, rz:'4deg',  kenar:'#1B3159', t:3.6 } ],
+  C: [ { f:'C-arka', x:190, y:140, rz:'-6deg', kenar:'#172B4D', t:3.4, dikey:true },
+       { f:'C-on',   x:560, y:170, rz:'4deg',  kenar:'#172B4D', t:3.4, dikey:true } ],
+};
+const v = new URLSearchParams(location.search).get('v') || 'A';
+const sahne = document.getElementById('sahne');
+for (const k of sahneler[v]) {
+  const el = document.createElement('div');
+  el.className = 'kart' + (k.dikey ? ' dikey' : '');
+  el.style.cssText = `--x:${k.x}px;--y:${k.y}px;--rz:${k.rz};--kenar:${k.kenar};--t:${k.t}px;width:${k.dikey?55:85}mm;height:${k.dikey?85:55}mm`;
+  let h = '<div class="golge"></div>';
+  for (let i = 0; i < 8; i++) {
+    const z = (k.t * i / 8).toFixed(2), koyu = (0.28 - i * 0.03).toFixed(2);
+    h += `<div class="kat" style="transform:translateZ(${z}px);box-shadow:inset 0 0 0 99px rgba(0,0,0,${koyu})"></div>`;
+  }
+  h += `<div class="yuz"><iframe src="${k.f}.html?mod=mockup" title="${k.f}" scrolling="no"></iframe></div>`;
+  el.innerHTML = h;
+  sahne.appendChild(el);
+}
+</script>
+</body></html>

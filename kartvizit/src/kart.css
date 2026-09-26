@@ -1,38 +1,59 @@
-/* Beynelmilel kartvizit — ortak baskı temeli. Tüm ölçüler mm/pt. */
-/* Fontlar sabit (static) örneklerdir: PDF'e Type3 değil gömülü CID font olarak girer. */
-@font-face{font-family:"Atkinson Next";src:url(../fonts/atkinsonnext-400-latin.woff2) format("woff2");font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Atkinson Next";src:url(../fonts/atkinsonnext-400-latin-ext.woff2) format("woff2");font-weight:400;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Atkinson Next";src:url(../fonts/atkinsonnext-600-latin.woff2) format("woff2");font-weight:600;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Atkinson Next";src:url(../fonts/atkinsonnext-600-latin-ext.woff2) format("woff2");font-weight:600;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Atkinson Mono";src:url(../fonts/atkinsonmono-400-latin.woff2) format("woff2");font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Atkinson Mono";src:url(../fonts/atkinsonmono-400-latin-ext.woff2) format("woff2");font-weight:400;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Spectral";src:url(../fonts/spectral-400-latin.woff2) format("woff2");font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Spectral";src:url(../fonts/spectral-400-latin-ext.woff2) format("woff2");font-weight:400;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Spectral";src:url(../fonts/spectral-500-latin.woff2) format("woff2");font-weight:500;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Spectral";src:url(../fonts/spectral-500-latin-ext.woff2) format("woff2");font-weight:500;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Albert Sans";src:url(../fonts/albert-sans-400-latin.woff2) format("woff2");font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Albert Sans";src:url(../fonts/albert-sans-400-latin-ext.woff2) format("woff2");font-weight:400;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Albert Sans";src:url(../fonts/albert-sans-500-latin.woff2) format("woff2");font-weight:500;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Albert Sans";src:url(../fonts/albert-sans-500-latin-ext.woff2) format("woff2");font-weight:500;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
-@font-face{font-family:"Newsreader";src:url(../fonts/newsreader-400-latin.woff2) format("woff2");font-weight:400;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-@font-face{font-family:"Newsreader";src:url(../fonts/newsreader-400-latin-ext.woff2) format("woff2");font-weight:400;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
+/* Beynelmilel kartvizit, tur 2: ortak temel. Tek kaynak, üç çıktı:
+   düz (ekran/PNG) · baskı (PDF, print media) · katman (?katman=folyo|kabartma|beyaz|murekkep) · mockup (?mod=mockup). */
+@font-face{font-family:"EB Garamond";src:url(../fonts/ebgaramond-400-latin.woff2) format("woff2");font-weight:400;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:"EB Garamond";src:url(../fonts/ebgaramond-400-latin-ext.woff2) format("woff2");font-weight:400;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
+@font-face{font-family:"EB Garamond";src:url(../fonts/ebgaramond-400i-latin.woff2) format("woff2");font-weight:400;font-style:italic;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:"EB Garamond";src:url(../fonts/ebgaramond-400i-latin-ext.woff2) format("woff2");font-weight:400;font-style:italic;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
+@font-face{font-family:"Cormorant Garamond";src:url(../fonts/cormorantgaramond-500-latin.woff2) format("woff2");font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:"Cormorant Garamond";src:url(../fonts/cormorantgaramond-500-latin-ext.woff2) format("woff2");font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
+@font-face{font-family:"Jost";src:url(../fonts/jost-400-latin.woff2) format("woff2");font-weight:400;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:"Jost";src:url(../fonts/jost-400-latin-ext.woff2) format("woff2");font-weight:400;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/bodonimoda-500-latin.woff2) format("woff2");font-weight:500;font-style:normal;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:"Bodoni Moda";src:url(../fonts/bodonimoda-500-latin-ext.woff2) format("woff2");font-weight:500;font-style:normal;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1E9F}
 
 :root{
-  --navy:#1F3864; --bronze:#8A6D2F; --ink:#17181A; --muted:#565B63;
-  --white:#FFFFFF; --offwhite:#F3F2EE; --navy-muted:#BCC4D3;
-  --bleed:3mm; --safe:7mm;            /* 3 mm taşma + 4 mm güvenli alan */
-  --qr:23mm;                           /* 37 modül; sembol 29/37 × 23 = 18,03 mm */
-  --qz:2.486mm;                        /* 4 modül sessiz alan (SVG içinde beyaz) */
+  --navy:#1F3864; --navy-derin:#1A2F54; --bronz:#8A6D2F; --folyo-ekran:#A6864A; --ink:#17181A; --beyaz:#FFFFFF;
+  --safe:7mm;                      /* 3 mm taşma + 4 mm güvenli alan */
+  --qr:23mm; --qz:2.486mm;         /* 37 modül; sembol 29/37 × 23 = 18,03 mm; 4 modül beyaz */
+  --folyo-metal:linear-gradient(112deg,#5b4318 0%,#8f6e31 18%,#d9bd82 34%,#f3e2b6 40%,#a9853f 52%,#6e5222 68%,#b8944f 86%,#7c5d27 100%);
 }
 *{box-sizing:border-box}
 html,body{margin:0;padding:0}
-body{position:relative;overflow:hidden;width:91mm;height:61mm;background:var(--paper,#fff);
-  color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact;
-  text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;font-kerning:normal}
+body{position:relative;overflow:hidden;width:91mm;height:61mm;background:var(--kagit);color:var(--ink);
+  -webkit-print-color-adjust:exact;print-color-adjust:exact;text-rendering:geometricPrecision;-webkit-font-smoothing:antialiased;font-kerning:normal}
 body.dikey{width:61mm;height:91mm}
 p{margin:0}
 .abs{position:absolute}
 .qr{display:block;width:var(--qr);height:var(--qr)}
-.mark{display:block}
-/* Kağıt tonu yalnız ekranda simüle edilir; baskıda (PDF) mürekkepsiz beyaz kalır. */
-@media screen{ body[data-kagit]{background:var(--sim)} body[data-kagit] .qr{mix-blend-mode:multiply} }
+.caps{text-transform:uppercase}
+svg.mark{display:block;overflow:visible}
+
+/* Kör kabartma: mürekkepsiz. Düz ekranda ince ışık-gölge ile ima edilir, baskıda görünmez. */
+.kabartma{color:var(--kagit)}
+.kabartma:not(.folyo){filter:drop-shadow(-.25px -.25px 0 rgba(255,255,255,.9)) drop-shadow(.3px .4px .2px rgba(0,0,0,.22))}
+.folyo{color:var(--folyo-ekran,var(--bronz))}
+@media print{
+  body{background:var(--kagit-baski,var(--kagit))}
+  .kabartma:not(.folyo){visibility:hidden}
+  .folyo{color:var(--bronz)}
+}
+
+/* Katman PDF'leri: yalnız o işlem %100 siyah, gerisi boş. */
+html[data-katman] body{background:#fff!important}
+html[data-katman] body *{visibility:hidden!important;filter:none!important}
+html[data-katman="folyo"] .folyo, html[data-katman="folyo"] .folyo *,
+html[data-katman="kabartma"] .kabartma, html[data-katman="kabartma"] .kabartma *,
+html[data-katman="beyaz"] .beyaz,
+html[data-katman="murekkep"] .murekkep{visibility:visible!important;color:#000!important}
+html[data-katman] .cizgi.folyo, html[data-katman="beyaz"] .beyaz{background:#000!important}
+
+/* Mockup: ürün fotoğrafı simülasyonu (yalnız sunum; baskıya girmez). */
+html[data-mod="mockup"] .folyo{color:transparent;background:var(--folyo-metal);background-size:140% 100%;-webkit-background-clip:text;background-clip:text;
+  filter:drop-shadow(0 .35px .2px rgba(0,0,0,.35)) drop-shadow(0 -.2px 0 rgba(255,255,255,.18))}
+html[data-mod="mockup"] .cizgi.folyo{background:var(--folyo-metal);-webkit-background-clip:border-box;background-clip:border-box}
+html[data-mod="mockup"] .kabartma:not(.folyo){filter:drop-shadow(-.45px -.5px .15px rgba(255,255,255,.95)) drop-shadow(.55px .75px .45px rgba(35,30,20,.30)) drop-shadow(1.2px 1.6px 1.6px rgba(35,30,20,.10))}
+html[data-mod="mockup"] .folyo.kabartma{filter:drop-shadow(0 -.45px .1px rgba(255,255,255,.22)) drop-shadow(.6px .9px .6px rgba(0,0,0,.55))}
+html[data-mod="mockup"] body::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:multiply;opacity:var(--gren,.55);
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55 0 0 0 0 .52 0 0 0 0 .48 0 0 0 .55 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:110px}
+html[data-mod="mockup"] body::before{content:"";position:absolute;inset:0;pointer-events:none;z-index:5;
+  background:linear-gradient(125deg,rgba(255,255,255,var(--isik,.12)) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.07) 100%)}

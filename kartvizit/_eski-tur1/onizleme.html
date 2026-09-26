@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beynelmilel kartvizit — baskı önizlemesi</title>
+<style>
+@font-face{font-family:"Atkinson Mono";src:url(fonts/atkinsonmono-400-latin.woff2) format("woff2");font-weight:400}
+:root{
+  --masa:#E6E7EA; --yuzey:#F4F5F7; --cizgi:#C9CCD2; --metin:#1E2126; --soluk:#555A63;
+  --navy:#1F3864; --kesim:#C2185B; --guvenli:#1E7F74;
+  --r:4px; --hiz:180ms; --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{background:var(--masa);color:var(--metin);font:400 15px/1.6 "Segoe UI",system-ui,sans-serif}
+body{margin:0;padding:40px 32px 80px}
+.kap{max-width:1180px;margin:0 auto}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;margin-bottom:32px}
+h1{font-size:22px;font-weight:600;line-height:1.25;margin:0}
+.alt{margin:4px 0 0;color:var(--soluk);font-size:14px}
+.araclar{display:flex;flex-wrap:wrap;gap:8px}
+button{font:inherit;font-size:14px;color:var(--metin);background:var(--yuzey);border:1px solid var(--cizgi);border-radius:var(--r);
+  padding:7px 14px;cursor:pointer;transition:background var(--hiz) var(--ease),border-color var(--hiz) var(--ease),color var(--hiz) var(--ease)}
+button:hover{border-color:var(--soluk)}
+button:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+button[aria-pressed="true"],button[aria-selected="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+[role="tablist"]{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.sahne{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;padding:40px;background:var(--yuzey);border:1px solid var(--cizgi);border-radius:var(--r);overflow-x:auto}
+.sahne-ic{display:flex;flex-wrap:wrap;gap:40px;align-items:flex-start;zoom:var(--z,1)}
+figure{margin:0}
+figcaption{margin-top:10px;font-size:13px;color:var(--soluk)}
+.kagit{position:relative;width:var(--w);height:var(--h);overflow:hidden;background:#fff}
+.kagit iframe{display:block;border:0;width:var(--w);height:var(--h);pointer-events:none}
+.kl{position:absolute;pointer-events:none}
+.kl-tasma{inset:0;border:3mm solid rgba(150,155,165,.42)}
+.kl-kesim{inset:3mm;outline:.12mm solid var(--kesim)}
+.kl-guvenli{inset:7mm;border:.15mm dashed var(--guvenli)}
+/* Temiz görünüm: kesim çizgisine kırp, kılavuzları gizle */
+.temiz .kagit{width:calc(var(--w) - 6mm);height:calc(var(--h) - 6mm);outline:1px solid var(--cizgi)}
+.temiz .kagit iframe{margin:-3mm 0 0 -3mm}
+.temiz .kl{display:none}
+.lejant{display:flex;flex-wrap:wrap;gap:6px 20px;margin:14px 0 0;padding:0;list-style:none;font-size:13px;color:var(--soluk)}
+.lejant span{display:inline-block;width:18px;height:0;vertical-align:middle;margin-right:6px}
+.temiz .lejant{visibility:hidden}
+.bilgi{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px 48px;margin-top:32px}
+.bilgi h2{font-size:18px;font-weight:600;margin:0 0 6px}
+.bilgi h3{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--soluk);margin:20px 0 6px}
+.bilgi p{margin:0;max-width:62ch}
+.palet{display:flex;flex-wrap:wrap;gap:12px;margin:0;padding:0;list-style:none}
+.palet li{font:400 12px/1.4 "Atkinson Mono",monospace;color:var(--soluk)}
+.palet i{display:block;width:56px;height:36px;border:1px solid var(--cizgi);border-radius:var(--r);margin-bottom:4px}
+.dosya a{color:var(--navy);text-underline-offset:3px}
+.dosya a:hover{text-decoration-thickness:2px}
+.dosya a:focus-visible{outline:2px solid var(--navy);outline-offset:2px;border-radius:2px}
+[role="tabpanel"][hidden]{display:none}
+[role="tabpanel"]{animation:gir 260ms var(--ease)}
+@keyframes gir{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){[role="tabpanel"]{animation:none} button{transition:none}}
+@media (max-width:600px){body{padding:24px 16px 56px}.sahne{padding:12px}.sahne-ic{zoom:calc(var(--z,1) * .8)}}
+</style>
+</head>
+<body>
+<div class="kap">
+<header>
+  <div>
+    <h1>Beynelmilel kartvizit — baskı önizlemesi</h1>
+    <p class="alt">85 × 55 mm, 3 mm taşma, 4 mm güvenli alan. Kartlar CSS mm biriminde, gerçek ölçekte çizilir (ekran kalibrasyonuna bağlı).</p>
+  </div>
+  <div class="araclar">
+    <button type="button" id="temiz" aria-pressed="false">Temiz görünüm</button>
+    <button type="button" id="olcek" aria-pressed="false">2× büyüt</button>
+  </div>
+</header>
+
+<div role="tablist" aria-label="Varyantlar">
+  <button type="button" role="tab" id="t1" aria-controls="p1" aria-selected="true">V1 Künye</button>
+  <button type="button" role="tab" id="t2" aria-controls="p2" aria-selected="false" tabindex="-1">V2 Gece Mührü</button>
+  <button type="button" role="tab" id="t3" aria-controls="p3" aria-selected="false" tabindex="-1">V3 Tek Eksen</button>
+  <button type="button" role="tab" id="t4" aria-controls="p4" aria-selected="false" tabindex="-1">V4 Yalnız İsim</button>
+</div>
+
+<section role="tabpanel" id="p1" aria-labelledby="t1">
+  <div class="sahne"><div class="sahne-ic">
+    <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/v1-on.html" title="V1 ön yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Ön yüz</figcaption></figure>
+    <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/v1-arka.html" title="V1 arka yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Arka yüz</figcaption></figure>
+  </div></div>
+  <div class="bilgi">
+    <div>
+      <h2>V1 Künye</h2>
+      <p>İsviçre ızgarası: dört köşe, dört bilgi. İşaret sol üstte, isim ve iletişim künyesi aynı alt güvenli çizgiye oturur; iletişim bilgileri kod editörü gibi tek aralıklı fontla dizilir, bir yazılımcının kartı olduğunu süs eklemeden söyler.</p>
+      <h3>İmza detayı</h3>
+      <p>Kenar boyama: kartın dört kesit kenarı lacivert. Yüzeyde tek renk mürekkep dışında hiçbir efekt yok; lacivert, kart elde tutulunca kenardan görünür.</p>
+      <h3>Font çifti</h3>
+      <p>Atkinson Hyperlegible Next (600 isim, 400 unvan) + Atkinson Hyperlegible Mono 400 (künye). Dijital kartvizitle aynı ses.</p>
+    </div>
+    <div>
+      <h3>Palet</h3>
+      <ul class="palet"><li><i style="background:#FFFFFF"></i>#FFFFFF kağıt</li><li><i style="background:#17181A"></i>#17181A mürekkep</li><li><i style="background:#565B63"></i>#565B63 ikincil</li><li><i style="background:#1F3864"></i>#1F3864 işaret, alan adı, kenar</li></ul>
+      <h3>Baskı önerisi</h3>
+      <p>400 g mat kuşe veya 450 g Munken Pure/ekstra beyaz karton, laminasyonsuz (kenar boyama laminasyonu sevmez), ofset 2+2. Kenar boyama lacivert (Pantone 534 C). Folyo ya da kabartma yok.</p>
+      <h3>Dosyalar</h3>
+      <p class="dosya"><a href="v1-on.pdf">v1-on.pdf</a> · <a href="v1-arka.pdf">v1-arka.pdf</a> · <a href="v1-on.png">v1-on.png</a> · <a href="v1-arka.png">v1-arka.png</a></p>
+    </div>
+  </div>
+</section>
+
+<section role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+  <div class="sahne"><div class="sahne-ic">
+    <figure><div class="kagit" style="--w:61mm;--h:91mm"><iframe src="src/v2-on.html" title="V2 ön yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Ön yüz (dikey)</figcaption></figure>
+    <figure><div class="kagit" style="--w:61mm;--h:91mm"><iframe src="src/v2-arka.html" title="V2 arka yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Arka yüz (dikey)</figcaption></figure>
+  </div></div>
+  <div class="bilgi">
+    <div>
+      <h2>V2 Gece Mührü</h2>
+      <p>Dikey, iki yüzü de lacivert. B işareti bir mühür gibi üst üçte birde tek başına durur; isim ortada, iletişim alt kenarda. Setin tek koyu kartı; bir çekmeceden çıkarılan zarf mührü hissi.</p>
+      <h3>İmza detayı</h3>
+      <p>Yalnız B işareti bronz sıcak folyo. Kartın geri kalanı folyosuz; parıltı tek noktada toplanır. Arka yüzde QR, laciverdin içinde kâğıt beyazı bir pencerede durur.</p>
+      <h3>Font çifti</h3>
+      <p>Spectral 500 (isim) + Spectral 400 (unvan, iletişim; unvanda 0,06 em harf aralığı). Tek aile, iki ağırlık.</p>
+    </div>
+    <div>
+      <h3>Palet</h3>
+      <ul class="palet"><li><i style="background:#1F3864"></i>#1F3864 zemin</li><li><i style="background:#8A6D2F"></i>#8A6D2F bronz folyo</li><li><i style="background:#F3F2EE"></i>#F3F2EE metin</li><li><i style="background:#BCC4D3"></i>#BCC4D3 ikincil metin</li></ul>
+      <h3>Baskı önerisi</h3>
+      <p>Lacivert boyalı hamur karton (ör. Colorplan Navy 540 g) üzerine beyaz metin serigrafi/ofset opak beyaz + bronz sıcak folyo; ya da 400 g kuşe üzerine tam lacivert ofset + mat selefon, ardından folyo. QR paneli mürekkepsiz (kağıt beyazı) veya opak beyaz iki kat.</p>
+      <h3>Dosyalar</h3>
+      <p class="dosya"><a href="v2-on.pdf">v2-on.pdf</a> · <a href="v2-arka.pdf">v2-arka.pdf</a> · <a href="v2-on.png">v2-on.png</a> · <a href="v2-arka.png">v2-arka.png</a></p>
+    </div>
+  </div>
+</section>
+
+<section role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+  <div class="sahne"><div class="sahne-ic">
+    <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/v3-on.html" title="V3 ön yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Ön yüz</figcaption></figure>
+    <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/v3-arka.html" title="V3 arka yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Arka yüz</figcaption></figure>
+  </div></div>
+  <div class="bilgi">
+    <div>
+      <h2>V3 Tek Eksen</h2>
+      <p>Japon meishi disiplini: her şey tek bir dikey eksende. Küçük işaret, ortada isim, en altta iki satır iletişim. Kartın iki yüzü de ortalı ve simetrik; her yüzde tek renk mürekkep kullanılır.</p>
+      <h3>İmza detayı</h3>
+      <p>Letterpress (tipo baskı): harfler kağıda gömülür, parmakla hissedilir. Ön yüz yalnız lacivert, arka yüz yalnız mürekkep siyahı, her yüz tek geçiş.</p>
+      <h3>Font çifti</h3>
+      <p>Albert Sans 500 (isim) + Albert Sans 400 (geri kalanı; unvanda 0,08 em harf aralığı).</p>
+    </div>
+    <div>
+      <h3>Palet</h3>
+      <ul class="palet"><li><i style="background:#F5F5F2"></i>#F5F5F2 pamuk kağıt (kağıt rengi, baskı değil)</li><li><i style="background:#1F3864"></i>#1F3864 ön yüz mürekkebi</li><li><i style="background:#17181A"></i>#17181A arka yüz mürekkebi (QR)</li></ul>
+      <h3>Baskı önerisi</h3>
+      <p>600 g %100 pamuklu kağıt (ör. Crane Lettra Pearl White veya Gmund Cotton), letterpress 1+1, laminasyon yok. QR letterpress'te hafif dolabilir; matbaadan deneme baskısı iste, gerekirse arka yüzü ofset/dijital bas.</p>
+      <h3>Dosyalar</h3>
+      <p class="dosya"><a href="v3-on.pdf">v3-on.pdf</a> · <a href="v3-arka.pdf">v3-arka.pdf</a> · <a href="v3-on.png">v3-on.png</a> · <a href="v3-arka.png">v3-arka.png</a></p>
+    </div>
+  </div>
+</section>
+
+<section role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+  <div class="sahne"><div class="sahne-ic">
+    <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/v4-on.html" title="V4 ön yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Ön yüz: yalnız isim</figcaption></figure>
+    <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/v4-arka.html" title="V4 arka yüz" loading="lazy"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Arka yüz: yalnız QR</figcaption></figure>
+  </div></div>
+  <div class="bilgi">
+    <div>
+      <h2>V4 Yalnız İsim</h2>
+      <p>Ön yüzde yalnızca isim, arka yüzde yalnızca QR; başka metin, logo ya da unvan yok. Geri kalan her şey QR'ın açtığı sitede. Kartı verirken söylenecek tek cümle: "Arkasını okut."</p>
+      <h3>İmza detayı</h3>
+      <p>İsim ve QR aynı köşeyi paylaşır: isim ön yüzün sol altında, QR arka yüzün sağ altında. Kart çevrildiğinde QR tam olarak ismin arkasına denk gelir. İsim bronz folyo.</p>
+      <h3>Font</h3>
+      <p>Newsreader 400 (optik boyut 14'e sabitlenmiş). Tek aile, tek ağırlık, tek satır.</p>
+    </div>
+    <div>
+      <h3>Palet</h3>
+      <ul class="palet"><li><i style="background:#FBFBF9"></i>#FBFBF9 kalın beyaz karton (kağıt rengi)</li><li><i style="background:#8A6D2F"></i>#8A6D2F bronz folyo (isim)</li><li><i style="background:#17181A"></i>#17181A QR mürekkebi</li></ul>
+      <h3>Baskı önerisi</h3>
+      <p>700–800 g çift katlı (duplex) beyaz pamuklu karton; ön yüz bronz sıcak folyo, arka yüz QR ofset/dijital siyah. Folyo kalıbı ince serif için hassas işlenmeli; QR'ı asla folyo ile basma.</p>
+      <h3>Dosyalar</h3>
+      <p class="dosya"><a href="v4-on.pdf">v4-on.pdf</a> · <a href="v4-arka.pdf">v4-arka.pdf</a> · <a href="v4-on.png">v4-on.png</a> · <a href="v4-arka.png">v4-arka.png</a></p>
+    </div>
+  </div>
+</section>
+
+<ul class="lejant" aria-label="Kılavuz çizgileri">
+  <li><span style="border-top:8px solid rgba(150,155,165,.42)"></span>3 mm taşma alanı</li>
+  <li><span style="border-top:1px solid var(--kesim)"></span>Kesim çizgisi (85 × 55 mm)</li>
+  <li><span style="border-top:1px dashed var(--guvenli)"></span>Güvenli alan (kenardan 4 mm)</li>
+</ul>
+</div>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const sec = t => {
+    tabs.forEach(x => {
+      const on = x === t;
+      x.setAttribute('aria-selected', on);
+      x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => sec(t));
+    t.addEventListener('keydown', e => {
+      const d = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+      if (!d) return;
+      const n = tabs[(i + d + tabs.length) % tabs.length];
+      sec(n); n.focus();
+    });
+  });
+  const toggle = (id, fn) => {
+    const b = document.getElementById(id);
+    b.addEventListener('click', () => {
+      const on = b.getAttribute('aria-pressed') !== 'true';
+      b.setAttribute('aria-pressed', on);
+      fn(on);
+    });
+  };
+  toggle('temiz', on => document.body.classList.toggle('temiz', on));
+  toggle('olcek', on => document.documentElement.style.setProperty('--z', on ? 2 : 1));
+})();
+</script>
+</body>
+</html>
