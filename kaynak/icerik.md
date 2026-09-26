@@ -69,7 +69,7 @@ Bölüm alt cümlesi — TR: "Her türlü sistem ve profesyonel web sitesi; rekl
 
 ---
 
-## 4a. Sanayi AI vitrini (kullanıcı 2026-09-26: "görseliyle beraber yukarı" → FlowDesk'in ÜSTÜNDE, hizmetlerden hemen sonra)
+## 4a. Sanayi AI vitrini (kullanıcı 2026-09-26: "görseliyle beraber yukarı" → sonra "FlowDesk'in altına al" → FlowDesk'in HEMEN ALTINDA)
 
 | Alan | TR | EN | Kaynak |
 |---|---|---|---|
