@@ -139,7 +139,7 @@ Sattığımız her şeyi önce kendimiz için kurduk; bir işi tasarımdan altya
 Yeni bir iş için en hızlı yol WhatsApp. [kullanıcı — birincil CTA]
 
 **EN**
-Yağız Ertuğrul Kaya. I live in Istanbul, Türkiye; I run Beynelmilel together with my team. [dataroom:12; plan90:35]
+Yağız Ertuğrul Kaya. I live in Istanbul; Beynelmilel was founded in Bursa, and my team and I run it from Istanbul. [dataroom:12; plan90:35]
 Everything we sell, we first built for ourselves; we take a project end-to-end, from design to infrastructure, from launch to security. [seed:546,571]
 For a new project, WhatsApp is the fastest way to reach me. [kullanıcı]
 
