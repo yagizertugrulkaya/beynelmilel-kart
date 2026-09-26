@@ -13,6 +13,8 @@ const faces = {
   'B-arka': { katman: ['folyo', 'beyaz', 'murekkep'] },
   'C-on':   { katman: ['folyo', 'kabartma'], dikey: true },
   'C-arka': { katman: ['beyaz', 'murekkep'], dikey: true },
+  'D1-on': { katman: [] }, 'D1-arka': { katman: [] },
+  'D2-on': { katman: [] }, 'D2-arka': { katman: [] },
 };
 const url = (f, q = '') => pathToFileURL(path.join(__dirname, f)).href + q;
 
@@ -25,7 +27,9 @@ const url = (f, q = '') => pathToFileURL(path.join(__dirname, f)).href + q;
   page.on('requestfailed', r => errors.push('FAILED ' + r.url()));
   const load = async u => { await page.goto(u, { waitUntil: 'networkidle0' }); await page.evaluate(() => document.fonts.ready); };
 
+  const yalniz = (process.argv.find(a => a.startsWith('--yalniz=')) || '').split('=')[1];
   for (const [f, o] of Object.entries(faces)) {
+    if (yalniz && !f.startsWith(yalniz)) continue;
     const [wmm, hmm] = o.dikey ? [61, 91] : [91, 61];
     const w = wmm * PX_PER_MM, h = hmm * PX_PER_MM;
     const pdf = file => page.pdf({ path: path.join(OUT, file), width: wmm + 'mm', height: hmm + 'mm', printBackground: true, preferCSSPageSize: true, pageRanges: '1' });
@@ -38,7 +42,7 @@ const url = (f, q = '') => pathToFileURL(path.join(__dirname, f)).href + q;
   }
 
   if (process.argv.includes('--mockup')) {
-    for (const v of ['A', 'B', 'C']) {
+    for (const v of (yalniz ? [yalniz + '1'] : ['A', 'B', 'C', 'D1'])) {
       await page.setViewport({ width: 1000, height: 640, deviceScaleFactor: 2 });
       await load(url('mockup.html', '?v=' + v));
       for (const fr of page.frames().slice(1)) await fr.evaluate(() => document.fonts.ready);

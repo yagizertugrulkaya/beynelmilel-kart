@@ -1,7 +1,24 @@
-# Beynelmilel kartvizit — matbaa notu (tur 2)
+# Beynelmilel kartvizit — matbaa notu
 
 Hazırlayan: Yağız Ertuğrul Kaya · +90 533 476 55 95 · yagizkaya43@gmail.com
 Tarih: 26.09.2026
+
+## 0. D varyantı (güncel öneri, tur 3): beyaz kart, tek renk lacivert
+
+| | D1 (ana öneri) | D2 |
+|---|---|---|
+| Ön yüz | B logosu, "Yağız Ertuğrul Kaya", "KURUCU" | D1 + altta telefon · e-posta (7 pt) |
+| Arka yüz | "BEYNELMİLEL" + QR | D1 + QR altında "beynelmilel.org" (7 pt) |
+| Dosyalar | `D1-on.pdf`, `D1-arka.pdf` | `D2-on.pdf`, `D2-arka.pdf` |
+
+- **Ölçü:** 85 × 55 mm yatay; dosya 91 × 61 mm (3 mm taşma), güvenli alan kesimden 4 mm. Taşma bölgesi boş (beyaz); kesim kaymasında beyaz kenar riski yok.
+- **Renk:** Tek renk, **Pantone 534 C** (RGB #1F3864, yaklaşık C100 M82 Y31 K20). Logo, metin ve **QR dahil her şey bu renkte**; siyah ya da ikinci renk yok. Spot basılacaksa 1+1; dörtlü baskıda lacivert CMYK karşılığıyla (QR için register'a dikkat; tercih spot).
+- **Kağıt:** 350–400 g mat kuşe (ekonomik) ya da 600 g %100 pamuklu (premium, letterpress'e uygun). Laminasyon yok.
+- **İşlem:** Folyo ve kabartma yok. İsteğe bağlı: ön yüzdeki B logosu mürekkepsiz kör kabartma yapılabilir (o zaman ayrı kalıp dosyası hazırlanır; logo lacivert basılmaz).
+- **QR:** İçerik `http://beynelmilel.org/`, EC H. Sembol 18,0 mm, çevresinde 4 modül (2,5 mm) beyaz. Koyu modüller lacivert #1F3864 (kontrast 11,6:1); iki arka yüzde de dijital olarak okundu. Küçültmeyin; provada telefonla tekrar okutun. Tipo (letterpress) baskıda mürekkep yayılmasına karşı deneme baskısı alın.
+- **Fontlar** PDF'e gömülü: Cormorant Garamond 500 (isim, D2'de iletişim), EB Garamond 400 (KURUCU, BEYNELMİLEL).
+
+Aşağıdaki bölümler tur 2 varyantlarına (A, B, C) aittir.
 
 ## 1. Ölçü ve dosya düzeni
 
@@ -67,6 +84,7 @@ Tarih: 26.09.2026
 | `C-on.pdf`, `C-arka.pdf` | C kompozit (61 × 91 mm, dikey) |
 | `C-on-folyo.pdf`, `C-on-kabartma.pdf` | C ön: folyo ve kabartma (aynı şekil, tescilli) |
 | `C-arka-beyaz.pdf`, `C-arka-murekkep.pdf` | C arka: opak beyaz panel / QR K100 |
-| `*.png`, `mockup-*.png`, `_hepsi.png` | Yalnız görsel önizleme, **baskıya girmez** |
+| `D1-on.pdf`, `D1-arka.pdf`, `D2-on.pdf`, `D2-arka.pdf` | D varyantı, tek renk lacivert (bkz. bölüm 0) |
+| `*.png`, `mockup-*.png`, `_hepsi.png`, `D-duz.png` | Yalnız görsel önizleme, **baskıya girmez** |
 
 Baskı için yalnız PDF dosyalarını kullanın.

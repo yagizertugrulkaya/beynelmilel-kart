@@ -69,17 +69,70 @@ figcaption{margin-top:6px;font-size:8px;color:var(--soluk);letter-spacing:.04em}
 <body>
 <div class="kap">
 <header>
-  <p class="ust">Beynelmilel · Kartvizit · Tur 2</p>
+  <p class="ust">Beynelmilel · Kartvizit</p>
   <h1>Yağız Ertuğrul Kaya</h1>
 </header>
 
 <div role="tablist" aria-label="Varyantlar">
-  <button type="button" role="tab" id="tA" aria-controls="pA" aria-selected="true">A · Monogram Kabartma</button>
+  <button type="button" role="tab" id="tD1" aria-controls="pD1" aria-selected="true">D1 · Birebir</button>
+  <button type="button" role="tab" id="tD2" aria-controls="pD2" aria-selected="false" tabindex="-1">D2 · İletişimli</button>
+  <button type="button" role="tab" id="tA" aria-controls="pA" aria-selected="false" tabindex="-1">A · Monogram Kabartma</button>
   <button type="button" role="tab" id="tB" aria-controls="pB" aria-selected="false" tabindex="-1">B · Bronz Çizgi</button>
   <button type="button" role="tab" id="tC" aria-controls="pC" aria-selected="false" tabindex="-1">C · Yalnız İsim</button>
 </div>
 
-<section role="tabpanel" id="pA" aria-labelledby="tA">
+<section role="tabpanel" id="pD1" aria-labelledby="tD1">
+  <div class="duz" style="border-top:0;padding-top:0">
+    <div class="duz-bas"><h3>Düz görünüm, ölçekli</h3><button type="button" class="kl-dugme" aria-pressed="false">Taşma ve güvenli alanı göster</button></div>
+    <div class="yuzler">
+      <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/D1-on.html" title="D1 Ön yüz"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Ön yüz</figcaption></figure>
+      <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/D1-arka.html" title="D1 Arka yüz"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Arka yüz</figcaption></figure>
+    </div>
+  </div>
+  <div class="bilgi">
+    <div>
+      <h2>D1 · Birebir</h2>
+      <p>Ön yüzde B logosu, isim ve KURUCU; arka yüzde BEYNELMİLEL ve QR. Başka hiçbir öğe yok. Her şey tek eksende ortalı, beyaz kart üstünde tek renk lacivert.</p>
+      <h3>Tipografi</h3>
+      <p>İsim: Cormorant Garamond 500, 14 pt. KURUCU ve BEYNELMİLEL: EB Garamond, geniş aralıklı büyük harf (0,32–0,34 em).</p>
+    </div>
+    <div>
+      <h3>Malzeme ve baskı</h3>
+      <p>Beyaz kağıt, tek renk lacivert (Pantone 534 C) 1+1. 350–400 g mat kuşe ya da 600 g pamuklu. Folyo ve kabartma yok; istenirse logo kör kabartma olabilir.</p>
+      <h3>Palet</h3>
+      <ul class="palet"><li><i style="background:#FFFFFF"></i>kağıt beyazı</li><li><i style="background:#1F3864"></i>#1F3864 tüm baskı, QR dahil</li></ul>
+    </div>
+  </div>
+  <p class="dosya">Baskı: <a href="D1-on.pdf">D1-on.pdf</a> · <a href="D1-arka.pdf">D1-arka.pdf</a> · Görsel: <a href="D1-on.png">D1-on.png</a> · <a href="D1-arka.png">D1-arka.png</a> · <a href="D-duz.png">D-duz.png</a></p>
+  <img class="mockup" src="mockup-D1.png" width="2000" height="1280" alt="D1: iki beyaz kart keten zeminde; önde logo, isim ve Kurucu, arkada BEYNELMİLEL ve QR" style="margin-top:36px">
+</section>
+
+<section role="tabpanel" id="pD2" aria-labelledby="tD2" hidden>
+  <div class="duz" style="border-top:0;padding-top:0">
+    <div class="duz-bas"><h3>Düz görünüm, ölçekli</h3><button type="button" class="kl-dugme" aria-pressed="false">Taşma ve güvenli alanı göster</button></div>
+    <div class="yuzler">
+      <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/D2-on.html" title="D2 Ön yüz"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Ön yüz</figcaption></figure>
+      <figure><div class="kagit" style="--w:91mm;--h:61mm"><iframe src="src/D2-arka.html" title="D2 Arka yüz"></iframe><i class="kl kl-tasma"></i><i class="kl kl-kesim"></i><i class="kl kl-guvenli"></i></div><figcaption>Arka yüz</figcaption></figure>
+    </div>
+  </div>
+  <div class="bilgi">
+    <div>
+      <h2>D2 · İletişimli</h2>
+      <p>D1 ile aynı içerik, iki küçük ekle: ön yüzün altında telefon ve e-posta, arka yüzde QR altında beynelmilel.org. Yerleşim sola hizalı ve asimetrik.</p>
+      <h3>Tipografi</h3>
+      <p>İsim: Cormorant Garamond 500, 14 pt. KURUCU ve BEYNELMİLEL: EB Garamond, geniş aralıklı büyük harf (0,32–0,34 em). İletişim ve alan adı: Cormorant Garamond 500, 7 pt.</p>
+    </div>
+    <div>
+      <h3>Malzeme ve baskı</h3>
+      <p>Beyaz kağıt, tek renk lacivert (Pantone 534 C) 1+1. 350–400 g mat kuşe ya da 600 g pamuklu. Folyo ve kabartma yok; istenirse logo kör kabartma olabilir.</p>
+      <h3>Palet</h3>
+      <ul class="palet"><li><i style="background:#FFFFFF"></i>kağıt beyazı</li><li><i style="background:#1F3864"></i>#1F3864 tüm baskı, QR dahil</li></ul>
+    </div>
+  </div>
+  <p class="dosya">Baskı: <a href="D2-on.pdf">D2-on.pdf</a> · <a href="D2-arka.pdf">D2-arka.pdf</a> · Görsel: <a href="D2-on.png">D2-on.png</a> · <a href="D2-arka.png">D2-arka.png</a> · <a href="D-duz.png">D-duz.png</a></p>
+</section>
+
+<section role="tabpanel" id="pA" aria-labelledby="tA" hidden>
   <img class="mockup" src="mockup-A.png" width="2000" height="1280" alt="A varyantı: beyaz pamuklu iki kart keten zeminde; önde kör kabartma B monogramı ve isim, arkada QR">
   <div class="bilgi">
     <div>
