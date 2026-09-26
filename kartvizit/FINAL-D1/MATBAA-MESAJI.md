@@ -2,7 +2,7 @@
 
 Merhaba, kartvizit bastırmak istiyorum. Dosyalar ekte:
 
-- `D1-on.pdf` (ön yüz) ve `D1-arka.pdf` (arka yüz) — vektör PDF, fontlar gömülü.
+- `D1-on.pdf` (ön yüz) ve `D1-arka.pdf` (arka yüz) — PDF, fontlar gömülü (logo 1900 dpi görsel). PDF kabul etmeyen online üreticiler için aynı yüzler `D1-on.jpg` / `D1-arka.jpg` (300 dpi, 1075×722 px, taşma dahil).
 - Kesim ölçüsü **85 × 55 mm** yatay; dosyalar **3 mm taşma paylı (91 × 61 mm)** hazırlandı, kesim işareti eklemedim.
 - **Tek renk baskı: lacivert Pantone 534 C** (CMYK karşılığı yaklaşık C100 M82 Y31 K20; dosyada RGB #1F3864). Ön ve arka aynı renk, 1+1.
 - Kâğıt: **350–400 g mat kuşe** (mat selefon isteğe bağlı) ya da daha lüks istenirse **600 g pamuklu (cotton) karton**.
