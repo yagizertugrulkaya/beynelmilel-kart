@@ -107,10 +107,10 @@ Alt cümle — TR: "Kendi paramızla, kendi adımızla canlıya taşıdıklarım
 
 | Ürün | TR | EN | Link | Kaynak |
 |---|---|---|---|---|
+| Sanayi AI | Türk sanayicisinin yapay zekâ masası. | The Turkish manufacturer's AI desk. | `https://sanayiaiapp.com` | seed:208-209 | [kullanıcı 2026-09-26: en üste]
 | FlowDesk | Klinikten fabrikaya: tek çatı altında işletme yönetimi. | From clinic to factory: business management under one roof. | `https://flowdesksolutions.com` | seed:406 |
 | Solavoy | Nereye ve kaç parayla — gerisini Solavoy planlar. Sekiz dilde yapay zekâ destekli seyahat planlayıcı. | Where to, on what budget — Solavoy plans the rest. An AI-assisted travel planner in eight languages. | `https://www.solavoy.com` | seed:164-165; ozetsolavoy:8 |
 | Erasocial | Erasmus öğrencileri, aynı şehirde buluşuyor. | Erasmus students, meeting in the same city. | `https://erasocial.vercel.app` | seed:111-112 |
-| Sanayi AI | Türk sanayicisinin yapay zekâ masası. | The Turkish manufacturer's AI desk. | `https://sanayiaiapp.com` | seed:208-209 |
 | Bütçem | Banka bağlantısı yok, sürpriz yok: bilinçli bütçe. | No bank connection, no surprises: mindful budgeting. | `https://butcem-three.vercel.app` | seed:347-348 |
 
 ### 6b. Atölyede (henüz yayında olmayan kendi işlerimiz — LİNKSİZ kartlar, "Geliştirmede / In development" etiketi)

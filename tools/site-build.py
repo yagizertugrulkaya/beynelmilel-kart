@@ -30,6 +30,19 @@ os.makedirs(os.path.join(OUT, "en"))
 shutil.copytree(os.path.join(SRC, "assets"), os.path.join(OUT, "assets"))
 shutil.copy(os.path.join(SRC, "yagiz-ertugrul-kaya.vcf"), OUT)
 io.open(os.path.join(OUT, ".nojekyll"), "w").write("")
+_qr = os.path.join(ROOT, "qr", "beynelmilel-org-paylasim.png")  # paylaşım kartı: https://D/qr.png
+if os.path.exists(_qr):
+    shutil.copy(_qr, os.path.join(OUT, "qr.png"))
+    os.makedirs(os.path.join(OUT, "qr"))  # https://D/qr/ — telefonda "Ana Ekrana Ekle" ile tek dokunuşta gösterilecek QR sayfası
+    io.open(os.path.join(OUT, "qr", "index.html"), "w", encoding="utf-8", newline="\n").write(
+        '<!doctype html>\n<html lang="tr">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+        '<title>Beynelmilel QR</title>\n<meta name="description" content="Beynelmilel dijital kartvizit QR kodu">\n'
+        '<meta name="robots" content="noindex">\n<meta name="theme-color" content="#F6F4F1">\n'
+        '<meta name="apple-mobile-web-app-capable" content="yes">\n<meta name="apple-mobile-web-app-title" content="QR">\n'
+        '<link rel="apple-touch-icon" href="../apple-touch-icon.png">\n<link rel="icon" href="../favicon.ico">\n'
+        '<style>html,body{margin:0;height:100%;background:#F6F4F1}body{display:flex;align-items:center;justify-content:center}'
+        'img{width:min(100vw,75vh);height:auto;display:block}</style>\n</head>\n<body>\n'
+        '<a href="../"><img src="../qr.png" alt="beynelmilel.org QR kodu — Yağız Ertuğrul Kaya, Beynelmilel" width="1200" height="1500"></a>\n</body>\n</html>\n')
 
 # ---- favicon seti (logo_mark_300.png: lacivert işaret, şeffaf, 300x264 -> kare kanvas)
 mark = Image.open(os.path.join(SRC, "assets", "logo_mark_300.png")).convert("RGBA")
