@@ -35,7 +35,7 @@ Dil anahtarı: `TR · EN` (aktif olan `aria-current="page"`). TR sayfada EN link
 ## 2. Beynelmilel ne yapar
 
 **TR**
-Beynelmilel, İstanbul'dan çalışan bir yazılım stüdyosu ve ajans. [seed:556 "Türkiye'den çalışan" → Bursa: plan90:35]
+Beynelmilel, Bursa'da kurulmuş, İstanbul'dan çalışan bir yazılım stüdyosu ve ajans. [seed:556 "Türkiye'den çalışan" → Bursa: plan90:35]
 Sattığımız her şeyi önce kendimiz için kurduk: pilates stüdyoları için yönetim sistemi kurarken çok kiracılı mimariyi, Erasmus öğrencileri için sosyal ağ kurarken moderasyon ve veri güvenliğini, yapay zekâ ürünleri kurarken maliyet-performans dengesini kendi ürünlerimizde öğrendik. [seed:556-558]
 Müşteri işine bu birikimle geliriz. [seed:558]
 
@@ -45,7 +45,7 @@ Müşteri işine bu birikimle geliriz. [seed:558]
 - **Canlıya kadar.** Tasarım dosyası değil, yayında çalışan ürün teslim ederiz. [seed:564]
 
 **EN**
-Beynelmilel is a software studio and agency working from Istanbul, Türkiye. [seed:571]
+Beynelmilel is a software studio and agency founded in Bursa and working from Istanbul, Türkiye. [seed:571]
 Everything we sell, we first built for ourselves: we learned multi-tenant architecture building a management system for Pilates studios, moderation and data safety building a social network for Erasmus students, and cost-performance trade-offs building AI products — all in our own products. [seed:573]
 We arrive at client work carrying that experience. [seed:573]
 
@@ -134,7 +134,7 @@ Alt cümle — TR: "Henüz yayında olmayan, masamızda büyüyen işler." [kull
 ## 7. Hakkımda
 
 **TR**
-Yağız Ertuğrul Kaya. İstanbul'da yaşıyorum; Beynelmilel'i ekibimle yürütüyoruz. [dataroom/00-Genel-Bakis-TR.md:12 "1 kurucu"; plan90:35]
+Yağız Ertuğrul Kaya. İstanbul'da yaşıyorum; Bursa'da kurduğumuz Beynelmilel'i ekibimle İstanbul'dan yürütüyoruz. [dataroom/00-Genel-Bakis-TR.md:12 "1 kurucu"; plan90:35]
 Sattığımız her şeyi önce kendimiz için kurduk; bir işi tasarımdan altyapıya, yayından güvenliğe kadar uçtan uca üstleniriz. [seed:543,556]
 Yeni bir iş için en hızlı yol WhatsApp. [kullanıcı — birincil CTA]
 
